@@ -32,10 +32,6 @@ jobs:
         with:
           node-vesion: ${{ matrix.node_version }}
           
-      - name: Change wrapper permissions
-        run: chmod +x ./gradlew
-        continue-on-error: true
-        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
