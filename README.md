@@ -1,12 +1,12 @@
 
 <h1 align="center">
-    <a href="http://localhost:3000/">🔗 Conecta Sanofi</a>
+    <a href="https://www.sanoficonecta.com.br/">🔗 Conecta Sanofi</a>
 </h1>
 <p align="center">🚀 Testes automatizados no site da Conecta Sanofi </p>
 
 <p align="center">
   <kbd>
-    <img width="800" style="border-radius: 5px" height="250" src="https://github.com/Alexandre-Nunes/Proffy-Agilizei/blob/main/gh-images/Capa-Alexandre.jpg" alt="Intro">
+    <img width="800" style="border-radius: 5px" height="250" src="https://github.com/Alexandre-Nunes/Conecta-Sanofi/blob/main/gh-images/Capa.jpg.png" alt="Intro">
   </kbd>
 </p>
 
@@ -14,7 +14,7 @@
 
 <p align="center">
   <kbd>
-    <img width="1050" style="border-radius: 5px" height="550" src="https://github.com/Alexandre-Nunes/Proffy-Agilizei/blob/main/gh-images/video.gif" alt="Intro">
+    <img width="1050" style="border-radius: 5px" height="550" src="https://github.com/Alexandre-Nunes/Conecta-Sanofi/blob/main/gh-images/Video.gif" alt="Intro">
   </kbd>
 </p>
 
@@ -33,7 +33,7 @@ Além disto é bom ter um editor para trabalhar com o código como:
 ### 📖 Passo a passo 
 ```ruby
 # Clone este repositório
-$ git clone <git@github.com:Alexandre-Nunes/Conecta-Sanofi.git>
+$ git clone <https://github.com/Alexandre-Nunes/Conecta-Sanofi.git>
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd conecta-sanofi
