@@ -90,12 +90,12 @@ class Login {
         cy.get(el.InputEmail).type('medico04@teste.com')
         cy.get(el.InputSenha).type('123456')
         cy.get(el.ButtonEntrar).click({force: true})
-        //cy.get(el.ValidaLogin).should('contain', 'Doctor Four')
+        cy.get(el.ValidaLogin).should('contain', 'Doctor Four')
 
-       // cy.get(el.MenuProfile).click()
-       // cy.get(el.ButtonSairProfile).click()
-        //cy.get(el.ValidaLogout).should('be.visible')
-         // .should('contain', 'Doenças')
+       cy.get(el.MenuProfile).click()
+       cy.get(el.ButtonSairProfile).click()
+       cy.get(el.ValidaLogout).should('be.visible')
+         .should('contain', 'Doenças')
     }
 
     loginSemDadosObrigatorios() {
@@ -105,12 +105,16 @@ class Login {
         cy.get(el.UFError).should('contain', 'Escolher Estado')
         cy.get(el.RegistroError).should('contain', 'Favor informar seu número de registro')
         cy.get(el.PassError).should('contain', 'Favor informar sua senha')
+        cy.get(el.ButtonFecharModalLogin).click()
     }
 
     loginComDadosInvalidos() {
+        cy.get(el.MenuProfile).click()
+        cy.get(el.ButtonEntrarProfile).click()
+        cy.get(el.SelectTipoHCP).select('Médico (CRM)')
         cy.get(el.SelectEstado).select('BA')
-        cy.get(el.InputNumeroRegistro).type('1234')
-        cy.get(el.InputSenha).type('56789')
+        cy.get(el.InputNumeroRegistro).type('0000')
+        cy.get(el.InputSenha).type('00000')
         cy.get(el.ButtonEntrar).click({force: true})
         cy.get(el.GenericError).should('contain', 'Documento e/ou senha inválidos')
     }

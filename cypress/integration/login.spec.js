@@ -15,10 +15,7 @@ describe('Login', () => {
       login.loginMedicoComRegistro()
     })
 
-    it('Realizar login de Enfermeiro com número de registro', () => {
-      login.loginEnfermeiroComRegistro()
-    })
-
+   
     it('Realizar login de Médico com email', () => {
       login.loginMedicoComEmail()
     })

@@ -21,4 +21,5 @@ export const ELEMENTS = {
     RegistroError: '#registro-error',
     PassError: '#pass-error',
     GenericError: '#generic-error',
+    ButtonFecharModalLogin: '.c-base-modal-content__head > .icon'
 }

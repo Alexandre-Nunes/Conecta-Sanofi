@@ -3,11 +3,11 @@
 import login from '../support/pages/login'
 import loginsistema from '../support/pages/login-sistema'
 
-before(() => {
-  loginsistema.acessarSistema()
-})
+//before(() => {
+//  loginsistema.acessarSistema()
+//})
 
-describe('Login', () => {
+describe.skip('Login', () => {
 
   context('Cadastro com sucesso', () => {
 

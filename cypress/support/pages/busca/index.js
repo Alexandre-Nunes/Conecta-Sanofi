@@ -7,7 +7,7 @@ class Busca {
         cy.get(el.InputBuscaHeader).clear()
           .type('importância')
         cy.get(el.ButtonBuscarHeader).click()
-        cy.get(el.RetornoBusca).should('contain', 'Importância da proteção para Hepatite B')
+        cy.contains(el.RetornoBusca).should('contain.text', 'A importância do monitoramento de drogas terapêuticas no tratamento de infecções graves')
     }
 
     BuscaDeslogadoHeaderSemResultado() {
@@ -15,7 +15,7 @@ class Busca {
         cy.get(el.InputBuscaHeader).clear()
           .type('cypress')
         cy.get(el.ButtonBuscarHeader).click()
-        cy.get(el.RetornoError).should('contain', 'Nenhum resultado para "cypress"')
+        cy.contains(el.RetornoError)
     }
    
 }
