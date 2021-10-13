@@ -43,11 +43,9 @@ jobs:
         continue-on-error: true
       
       - run: npm run report:merge
-        continue-on-error: true
-      
+              
       - run: npm run report:mocha
-        continue-on-error: true
-
+       
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
