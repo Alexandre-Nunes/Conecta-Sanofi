@@ -5,9 +5,11 @@ class Busca {
     BuscaDeslogadoHeaderComResultado() {
         cy.get(el.LinkBuscaHeader).click()
         cy.get(el.InputBuscaHeader).clear()
-          .type('importância')
+          .type('covid')
         cy.get(el.ButtonBuscarHeader).click()
-        cy.contains(el.RetornoBusca).should('contain.text', 'A importância do monitoramento de drogas terapêuticas no tratamento de infecções graves')
+        cy.contains(el.RetornoBusca).should('contain.text', 'ARTIGO')
+       
+
     }
 
     BuscaDeslogadoHeaderSemResultado() {
@@ -15,7 +17,7 @@ class Busca {
         cy.get(el.InputBuscaHeader).clear()
           .type('cypress')
         cy.get(el.ButtonBuscarHeader).click()
-        cy.contains(el.RetornoError)
+        cy.contains(el.RetornoError).should('contain.text', 'Nenhum resultado para "cypress"')
     }
    
 }

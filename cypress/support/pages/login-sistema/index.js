@@ -4,11 +4,13 @@ class LoginSistema {
 
     acessarSistema() {
         cy.visit('/')
+        cy.wait(1000)
         cy.get(el.InputUsuarioSistema).type('sanoficonecta')
-        cy.get(el.InputSenhaSistema).should('be.visible')
-          .type('previewconecta')
-        cy.wait(1000)  
+        cy.wait(2000)
+        cy.get(el.InputSenhaSistema).type('previewconecta')
+        cy.wait(2000)  
         cy.get(el.ButtonLoginSistema).click()
+        cy.wait(1000)
 
         cy.get(el.ValidaLogin).should('be.visible')
           .should('contain', 'Doenças')

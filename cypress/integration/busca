@@ -3,14 +3,14 @@
 import busca from '../support/pages/busca'
 import loginsistema from '../support/pages/login-sistema'
 
-//beforeEach(() => {
-//    loginsistema.acessarSistema()
-//})
+beforeEach(() => {
+    loginsistema.acessarSistema()
+})
 
-describe.skip('Busca', () => {
+describe('Busca', () => {
 
     context('Busca com sucesso', () => {
-        it('Realizar uma busca no header estando deslogado no sistema', () => {
+        it.only('Realizar uma busca no header estando deslogado no sistema', () => {
            busca.BuscaDeslogadoHeaderComResultado()
         })
     })

@@ -1,53 +1,67 @@
 /// <reference types="cypress"/>
 
-import login from '../support/pages/login'
 import loginsistema from '../support/pages/login-sistema'
 
-//before(() => {
-//  loginsistema.acessarSistema()
-//})
+let Chance = require('chance')
+let chance = new Chance()
 
-describe.skip('Login', () => {
+describe('Cadastro', () => {
 
-  context('Cadastro com sucesso', () => {
+  before(() => {
+    loginsistema.acessarSistema()
+  })
 
-    it('Realizar cadastro de Médico', () => {
+  context('Cadastro sem sucesso', () => {
+
+    it('Tentar realizar cadastro de Médico com registro invalido', () => {
       cy.get('.menu-profile__indicator').click()
       cy.get('#btnSignUp').click()
       cy.get('#hcp-type').select('Médico (CRM)')
       cy.get('#uf').select('BA')
-      cy.get('#sf-register-2').type('12354')
-      cy.get('#sf-email').type('mediconovo@teste.com')
+      cy.get('#sf-register-2').type(chance.phone())
+      cy.get('#sf-email').type(chance.email())
       cy.get('#opt-in').check()
-      cy.get('#sf-continue-validation').click( {force: true} )
-
-      cy.get('#sf-name').type('Shaun')
-      cy.get('#sf-lastname').type('Murphy')
-      cy.get('#sf-cellphone').type('48999999999')
-      cy.get('#sf-password').type('123456')
-      cy.get('#sf-password-confirm').type('123456')
-      //cy.get('#sf-continue-validation').click()
+      cy.get('#sf-continue-validation').click({ force: true })
+      cy.get('#registro-error').should('contain.text', 'CRM inválido no CFM')
+      cy.get('.c-base-modal-content__head > .icon').click()
     })
 
-    it.only('Realizar cadastro de Enfermeiro', () => {
+    it('Tentar realizar cadastro de Médico sem aceitar os termos', () => {
       cy.get('.menu-profile__indicator').click()
       cy.get('#btnSignUp').click()
-      cy.get('#hcp-type').select('Enfermeiro (COREN)')
-      cy.get('#uf').select('SP')
-      cy.get('#sf-register-2').type('123333')
-      cy.get('#sf-email').type('mediconovo@teste.com')
-      cy.get('#opt-in').check()
-      cy.get('#sf-continue-validation').click( {force: true} )
-
-      cy.get('#sf-name').type('Shaun')
-      cy.get('#sf-lastname').type('Murphy')
-      cy.get('#sf-cellphone').type('48999999999')
-      cy.get('#sf-password').type('123456')
-      cy.get('#sf-password-confirm').type('123456')
-      //cy.get('#sf-continue-validation').click()
-
-
+      cy.get('#hcp-type').select('Médico (CRM)')
+      cy.get('#uf').select('BA')
+      cy.get('#sf-register-2').type('4163')
+      cy.get('#sf-email').type(chance.email())
+      cy.get('#sf-continue-validation').click({ force: true })
+      cy.get('#terms-error').should('contain.text', 'Marcar o aceite')
+      cy.get('.c-base-modal-content__head > .icon').click()
     })
-    
+
+    it('Tentar realizar cadastro de Médico duplicado', () => {
+      cy.get('.menu-profile__indicator').click()
+      cy.get('#btnSignUp').click()
+      cy.get('#hcp-type').select('Médico (CRM)')
+      cy.get('#uf').select('BA')
+      cy.get('#sf-register-2').type('4163')
+      cy.get('#sf-email').type(chance.email())
+      cy.get('#opt-in').check()
+      cy.get('#sf-continue-validation').click({ force: true })
+      cy.get('.c-text--h3 > strong').should('contain.text', 'Olá, identificamos que você já tem uma conta')
+      cy.get('.c-base-modal-content__head > .icon').click()
+    })
+
+    it('Tentar realizar cadastro de Médico sem informar os dados', () => {
+      cy.get('.menu-profile__indicator').click()
+      cy.get('#btnSignUp').click()
+      cy.get('#hcp-type').select('Médico (CRM)')
+      cy.get('#sf-continue-validation').click({ force: true })
+
+      cy.get('#uf-error').should('contain.text', 'Escolher Estado')
+      cy.get('#registro-error').should('contain.text', 'Favor informar seu número de registro')
+      cy.get('#email-error').should('contain.text', 'Email inválido')
+      cy.get('#terms-error').should('contain.text', 'Marcar o aceite')
+      cy.get('.c-base-modal-content__head > .icon').click()
+    })
   })
 })
