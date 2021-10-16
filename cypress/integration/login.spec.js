@@ -9,6 +9,10 @@ describe('Login', () => {
     loginsistema.acessarSistema()
   })
 
+  afterEach(() => {
+    cy.screenshot()
+  })
+
   context('Login com sucesso', () => {
 
     it('Realizar login de Médico com número de registro', () => {
@@ -31,7 +35,7 @@ describe('Login', () => {
       login.loginFisioterapeutaComRegistro()
     })
 
-  /////////// Login com Email ///////////////
+    /////////// Login com Email ///////////////
 
     it('Realizar login de Médico com email', () => {
       login.loginMedicoComEmail()

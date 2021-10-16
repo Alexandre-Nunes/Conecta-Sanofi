@@ -8,6 +8,10 @@ before(() => {
     loginsistema.acessarSistema()
 })
 
+afterEach(() => {
+    cy.screenshot()
+})
+
 describe('Busca com usuário deslogado', () => {
 
     context('Busca com sucesso', () => {
@@ -33,24 +37,25 @@ describe('Busca com usuário deslogado', () => {
             busca.BuscaDeslogadoHeaderSemResultado()
         })
 
-        it('Realizar uma busca vazia estando', () => {
+        it('Realizar uma busca vazia', () => {
             busca.BuscaVaziaDeslogado()
         })
-        
     })
 
     describe('Busca com usuário logado como Médico', () => {
 
+        beforeEach(() => {
+            login.loginMedicoComRegistro()
+        })
+
         context('Busca com sucesso', () => {
             it('Realizar uma busca pelo nome completo do termo', () => {
-                login.loginMedicoComRegistro()
                 busca.BuscaDeslogadoHeaderComResultado()
             })
         })
 
         context('Busca sem sucesso', () => {
             it('Realizar uma busca por termo inexistente', () => {
-                login.loginMedicoComRegistro()
                 busca.BuscaDeslogadoHeaderSemResultado()
             })
         })

@@ -9,6 +9,10 @@ describe('Cadastro', () => {
     loginsistema.acessarSistema()
   })
 
+  afterEach(() => {
+    cy.screenshot()
+  })
+
   context('Cadastro com sucesso', () => {
 
     it('Realizar cadastro de Nutricionista com sucesso', () => {
@@ -23,19 +27,19 @@ describe('Cadastro', () => {
     })
 
     it('Tentar realizar cadastro de Médico sem aceitar os termos', () => {
-     cadastro.cadastroMedicoSemAceitarTermos()
+      cadastro.cadastroMedicoSemAceitarTermos()
     })
 
     it('Tentar realizar cadastro de Médico com registro já cadastrado', () => {
-     cadastro.cadastroMedicoComRegistroJaCadastrado()
+      cadastro.cadastroMedicoComRegistroJaCadastrado()
     })
 
     it('Tentar realizar cadastro de Médico com email já cadastrado', () => {
-     cadastro.cadastroMedicoComEmailJaCadastrado()
+      cadastro.cadastroMedicoComEmailJaCadastrado()
     })
 
     it('Tentar realizar cadastro de Médico sem informar os dados obrigatórios', () => {
-     cadastro.cadastroMedicoSemInformarDadosObrigatorios()
+      cadastro.cadastroMedicoSemInformarDadosObrigatorios()
     })
   })
 })
