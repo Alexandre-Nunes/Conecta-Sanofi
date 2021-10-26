@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 1,
-    "passes": 0,
+    "suites": 5,
+    "tests": 7,
+    "passes": 4,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-10-25T08:13:27.866Z",
-    "end": "2021-10-25T08:14:28.189Z",
-    "duration": 60323,
+    "failures": 3,
+    "start": "2021-10-26T08:13:56.381Z",
+    "end": "2021-10-26T08:15:15.662Z",
+    "duration": 79281,
     "testsRegistered": 8,
-    "passPercent": 0,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 7,
+    "skipped": 1,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "322f7c3e-f33c-4497-96d2-0efe0a4f4508",
+      "uuid": "dd2c04be-61a3-4a60-a486-2524ba7f9d22",
       "title": "",
       "fullFile": "cypress/integration/busca.spec.js",
       "file": "cypress/integration/busca.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "39534f68-0bd6-4c4b-b37f-70667dec7ea8",
+          "uuid": "4e05893d-f5cf-4723-ae7f-6be887108240",
           "title": "Busca com usuário deslogado",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "7c961384-97ce-443c-8732-b9b86e1ea3e3",
+              "uuid": "9d0f9d97-65a5-4341-98b9-8e64e4e72950",
               "title": "Busca com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,21 +47,17 @@
                   "title": "Realizar uma busca pelo nome completo do termo",
                   "fullTitle": "Busca com usuário deslogado Busca com sucesso Realizar uma busca pelo nome completo do termo",
                   "timedOut": null,
-                  "duration": 60232,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 28554,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaDeslogadoHeaderComResultado();",
-                  "err": {
-                    "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping all of the remaining tests.",
-                    "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping all of the remaining tests.\n    at timedOutWaitingForPageLoad (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:139540:13)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:140560:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5920:41\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:314:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:127:25)",
-                    "diff": null
-                  },
-                  "uuid": "22d75f32-1439-497e-b8c5-92d1cd8c4915",
-                  "parentUUID": null,
+                  "err": {},
+                  "uuid": "cfe8c75f-66ed-4ec5-8ce0-bc40369031a8",
+                  "parentUUID": "9d0f9d97-65a5-4341-98b9-8e64e4e72950",
                   "isHook": false,
                   "skipped": false
                 },
@@ -69,75 +65,83 @@
                   "title": "Realizar uma busca por parte do nome do termo",
                   "fullTitle": "Busca com usuário deslogado Busca com sucesso Realizar uma busca por parte do nome do termo",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 5088,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaParteNomeTermo();",
-                  "err": {},
-                  "uuid": "0887d439-5cc4-49c9-b13a-cfc2dda9d0e5",
-                  "parentUUID": null,
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(2)`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(2)`, but never found it.\n    at BuscaParteNomeTermo (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:238:39)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:138:22)",
+                    "diff": null
+                  },
+                  "uuid": "9650ba2f-584c-4d60-a3dd-2614fcf4d259",
+                  "parentUUID": "9d0f9d97-65a5-4341-98b9-8e64e4e72950",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Realizar uma busca por termo utilizando traço",
                   "fullTitle": "Busca com usuário deslogado Busca com sucesso Realizar uma busca por termo utilizando traço",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 5205,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaPorTermoComTraco();",
-                  "err": {},
-                  "uuid": "2e6b1c2a-c34e-46d5-b571-9c8d5eab4842",
-                  "parentUUID": null,
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(2)`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(2)`, but never found it.\n    at BuscaPorTermoComTraco (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:252:39)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:141:22)",
+                    "diff": null
+                  },
+                  "uuid": "29e09a28-014d-4f28-8962-cea65ebd4fc7",
+                  "parentUUID": "9d0f9d97-65a5-4341-98b9-8e64e4e72950",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Realizar uma busca por termo utilizando acentuação e preposição",
                   "fullTitle": "Busca com usuário deslogado Busca com sucesso Realizar uma busca por termo utilizando acentuação e preposição",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 1781,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaPorTermoComAcentuacaoePreposicao();",
                   "err": {},
-                  "uuid": "2d6efe4e-6c76-4b0b-9e39-9eab26d811d3",
-                  "parentUUID": null,
+                  "uuid": "1f8fbe47-71b7-4a9b-a08e-4307cf0a8805",
+                  "parentUUID": "9d0f9d97-65a5-4341-98b9-8e64e4e72950",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "cfe8c75f-66ed-4ec5-8ce0-bc40369031a8",
+                "1f8fbe47-71b7-4a9b-a08e-4307cf0a8805"
+              ],
               "failures": [
-                "22d75f32-1439-497e-b8c5-92d1cd8c4915"
+                "9650ba2f-584c-4d60-a3dd-2614fcf4d259",
+                "29e09a28-014d-4f28-8962-cea65ebd4fc7"
               ],
               "pending": [],
-              "skipped": [
-                "0887d439-5cc4-49c9-b13a-cfc2dda9d0e5",
-                "2e6b1c2a-c34e-46d5-b571-9c8d5eab4842",
-                "2d6efe4e-6c76-4b0b-9e39-9eab26d811d3"
-              ],
-              "duration": 60232,
+              "skipped": [],
+              "duration": 40628,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "1ff6b34b-08fc-4556-8af7-5dc2ea56acf3",
+              "uuid": "2f9fab2c-4c08-4a75-90e9-7835291b0a4f",
               "title": "Busca sem sucesso",
               "fullFile": "",
               "file": "",
@@ -148,54 +152,54 @@
                   "title": "Realizar uma busca por termo inexistente",
                   "fullTitle": "Busca com usuário deslogado Busca sem sucesso Realizar uma busca por termo inexistente",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 1324,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaDeslogadoHeaderSemResultado();",
                   "err": {},
-                  "uuid": "80bfd992-996d-414e-8141-55890f5bf84d",
-                  "parentUUID": null,
+                  "uuid": "b7a4aa92-5912-4fac-bf47-9cfbe8bb6e75",
+                  "parentUUID": "2f9fab2c-4c08-4a75-90e9-7835291b0a4f",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Realizar uma busca vazia",
                   "fullTitle": "Busca com usuário deslogado Busca sem sucesso Realizar uma busca vazia",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 819,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_busca.default.BuscaVaziaDeslogado();",
                   "err": {},
-                  "uuid": "9135db36-4358-479e-a755-4671e4be0cac",
-                  "parentUUID": null,
+                  "uuid": "38c165b7-944a-473e-a085-be75c5a8e7b2",
+                  "parentUUID": "2f9fab2c-4c08-4a75-90e9-7835291b0a4f",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "b7a4aa92-5912-4fac-bf47-9cfbe8bb6e75",
+                "38c165b7-944a-473e-a085-be75c5a8e7b2"
+              ],
               "failures": [],
               "pending": [],
-              "skipped": [
-                "80bfd992-996d-414e-8141-55890f5bf84d",
-                "9135db36-4358-479e-a755-4671e4be0cac"
-              ],
-              "duration": 0,
+              "skipped": [],
+              "duration": 2143,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "f0758991-335a-485b-aab3-62c169b784ef",
+              "uuid": "4184f263-6f0f-4304-a7dd-b79e213556fa",
               "title": "Busca com usuário logado como Médico",
               "fullFile": "",
               "file": "",
@@ -204,7 +208,7 @@
               "tests": [],
               "suites": [
                 {
-                  "uuid": "adcc31da-ad8d-49a3-9753-36ab3168cdbf",
+                  "uuid": "6a041b94-2254-414c-ae4e-025a3b2f7f86",
                   "title": "Busca com sucesso",
                   "fullFile": "",
                   "file": "",
@@ -215,35 +219,39 @@
                       "title": "Realizar uma busca pelo nome completo do termo",
                       "fullTitle": "Busca com usuário deslogado Busca com usuário logado como Médico Busca com sucesso Realizar uma busca pelo nome completo do termo",
                       "timedOut": null,
-                      "duration": 0,
-                      "state": "skipped",
+                      "duration": 5255,
+                      "state": "failed",
                       "speed": null,
                       "pass": false,
-                      "fail": false,
+                      "fail": true,
                       "pending": false,
                       "context": null,
                       "code": "_busca.default.BuscaDeslogadoHeaderComResultado();",
-                      "err": {},
-                      "uuid": "98de2c2b-4349-4d3b-a6e6-cc1e29808685",
-                      "parentUUID": null,
+                      "err": {
+                        "message": "CypressError: Timed out retrying after 4050ms: `cy.select()` failed because this element is not visible:\n\n`<select id=\"uf\" name=\"UF\" class=\"c-base-modal__select\">...</select>`\n\nThis element `<select#uf.c-base-modal__select>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_content QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_content-medium QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_border-radius-slightly-rounded QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_drop-shadow-light\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ-headline\" aria-describedby=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ-description\" style=\"background-color: rgb(255, 255, 255); opacity: 1; transition: transform 1s ease 0s, opacity 0.5s ease 0s;\">...</div>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Busca com usuário logado co...`",
+                        "estack": "CypressError: Timed out retrying after 4050ms: `cy.select()` failed because this element is not visible:\n\n`<select id=\"uf\" name=\"UF\" class=\"c-base-modal__select\">...</select>`\n\nThis element `<select#uf.c-base-modal__select>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_content QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_content-medium QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_border-radius-slightly-rounded QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ_drop-shadow-light\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ-headline\" aria-describedby=\"QSIWebResponsiveDialog-Layout1-SI_2awlkX1xR3gTnNQ-description\" style=\"background-color: rgb(255, 255, 255); opacity: 1; transition: transform 1s ease 0s, opacity 0.5s ease 0s;\">...</div>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Busca com usuário logado co...`\n    at $Cy.ensureVisibility (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144037:24)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132665:14)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\n    at Promise._fulfill (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8859:18)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10473:46\nFrom Your Spec Code:\n    at Login.loginMedicoComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:397:29)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/busca.spec.js:157:22)",
+                        "diff": null
+                      },
+                      "uuid": "6337fe5b-424f-4e21-b888-31bbd1e584ca",
+                      "parentUUID": "6a041b94-2254-414c-ae4e-025a3b2f7f86",
                       "isHook": false,
-                      "skipped": true
+                      "skipped": false
                     }
                   ],
                   "suites": [],
                   "passes": [],
-                  "failures": [],
-                  "pending": [],
-                  "skipped": [
-                    "98de2c2b-4349-4d3b-a6e6-cc1e29808685"
+                  "failures": [
+                    "6337fe5b-424f-4e21-b888-31bbd1e584ca"
                   ],
-                  "duration": 0,
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 5255,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
                 },
                 {
-                  "uuid": "39cc9ae8-58ae-4587-855a-b54a6b101c85",
+                  "uuid": "25d090d6-a997-4469-82d7-e206314e0d65",
                   "title": "Busca sem sucesso",
                   "fullFile": "",
                   "file": "",
@@ -263,7 +271,7 @@
                       "context": null,
                       "code": "_busca.default.BuscaDeslogadoHeaderSemResultado();",
                       "err": {},
-                      "uuid": "f17d699a-03f3-4eae-b489-d7bd62b58066",
+                      "uuid": "2decaebb-155a-424f-9814-b6129b38f4a4",
                       "parentUUID": null,
                       "isHook": false,
                       "skipped": true
@@ -274,7 +282,7 @@
                   "failures": [],
                   "pending": [],
                   "skipped": [
-                    "f17d699a-03f3-4eae-b489-d7bd62b58066"
+                    "2decaebb-155a-424f-9814-b6129b38f4a4"
                   ],
                   "duration": 0,
                   "root": false,
