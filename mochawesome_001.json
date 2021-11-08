@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 6,
-    "start": "2021-11-07T08:14:34.033Z",
-    "end": "2021-11-07T08:15:49.062Z",
-    "duration": 75029,
+    "start": "2021-11-08T08:15:28.734Z",
+    "end": "2021-11-08T08:16:55.077Z",
+    "duration": 86343,
     "testsRegistered": 6,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "561225ca-9853-4ad4-88b3-b423c3ee4944",
+      "uuid": "08d7f927-fb70-44e7-8dde-8da8f1e98080",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1f66b2ff-b16f-4046-b2a5-15036856eb55",
+          "uuid": "5e83471f-a531-4c61-b55b-77d1b047ea48",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4e2e0537-b490-4cef-8eec-2e7f801ac0a9",
+              "uuid": "f55ce954-2a98-40f7-8cda-b5d770a57bda",
               "title": "Cadastro com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Realizar cadastro de Nutricionista com sucesso",
                   "fullTitle": "Cadastro Cadastro com sucesso Realizar cadastro de Nutricionista com sucesso",
                   "timedOut": null,
-                  "duration": 31534,
+                  "duration": 37826,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -56,12 +56,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroNutricionista();",
                   "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#sf-name`, but never found it.",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#sf-name`, but never found it.\n    at Cadastro.cadastroNutricionista (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2352:26)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2239:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > .menu-profile__panel-item--danger`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > .menu-profile__panel-item--danger`, but never found it.\n    at Cadastro.cadastroNutricionista (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2368:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2239:25)",
                     "diff": null
                   },
-                  "uuid": "79a5a8c9-bf65-41f5-88ba-7f4a076bc9d9",
-                  "parentUUID": "4e2e0537-b490-4cef-8eec-2e7f801ac0a9",
+                  "uuid": "a9f8e5d9-7aa3-4fa7-957a-c23eb70b7c84",
+                  "parentUUID": "f55ce954-2a98-40f7-8cda-b5d770a57bda",
                   "isHook": false,
                   "skipped": false
                 }
@@ -69,17 +69,17 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "79a5a8c9-bf65-41f5-88ba-7f4a076bc9d9"
+                "a9f8e5d9-7aa3-4fa7-957a-c23eb70b7c84"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 31534,
+              "duration": 37826,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "588ed0f2-c34c-4548-9155-41d0630577c3",
+              "uuid": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
               "title": "Cadastro sem sucesso",
               "fullFile": "",
               "file": "",
@@ -90,7 +90,7 @@
                   "title": "Tentar realizar cadastro de Médico com registro invalido",
                   "fullTitle": "Cadastro Cadastro sem sucesso Tentar realizar cadastro de Médico com registro invalido",
                   "timedOut": null,
-                  "duration": 4433,
+                  "duration": 4397,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -99,12 +99,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroMedicoComRegistroInvalido();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Cadastro.cadastroMedicoComRegistroInvalido (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2373:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2244:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.\n    at Cadastro.cadastroMedicoComRegistroInvalido (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2374:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2244:25)",
                     "diff": null
                   },
-                  "uuid": "66a851f6-5920-4b62-85c4-70837fcf87f7",
-                  "parentUUID": "588ed0f2-c34c-4548-9155-41d0630577c3",
+                  "uuid": "d1030bc4-ba16-4c9e-af26-4f0aaf849f0d",
+                  "parentUUID": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
                   "isHook": false,
                   "skipped": false
                 },
@@ -112,7 +112,7 @@
                   "title": "Tentar realizar cadastro de Médico sem aceitar os termos",
                   "fullTitle": "Cadastro Cadastro sem sucesso Tentar realizar cadastro de Médico sem aceitar os termos",
                   "timedOut": null,
-                  "duration": 4324,
+                  "duration": 4331,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -121,12 +121,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroMedicoSemAceitarTermos();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Cadastro.cadastroMedicoSemAceitarTermos (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2387:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2247:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.\n    at Cadastro.cadastroMedicoSemAceitarTermos (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2388:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2247:25)",
                     "diff": null
                   },
-                  "uuid": "7e03f6ed-48b0-4a22-b0ad-303b41f37001",
-                  "parentUUID": "588ed0f2-c34c-4548-9155-41d0630577c3",
+                  "uuid": "a52bd0ea-faa8-4448-b765-087a759b9925",
+                  "parentUUID": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
                   "isHook": false,
                   "skipped": false
                 },
@@ -134,7 +134,7 @@
                   "title": "Tentar realizar cadastro de Médico com registro já cadastrado",
                   "fullTitle": "Cadastro Cadastro sem sucesso Tentar realizar cadastro de Médico com registro já cadastrado",
                   "timedOut": null,
-                  "duration": 4329,
+                  "duration": 4323,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -143,12 +143,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroMedicoComRegistroJaCadastrado();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Cadastro.cadastroMedicoComRegistroJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2400:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2250:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.\n    at Cadastro.cadastroMedicoComRegistroJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2401:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2250:25)",
                     "diff": null
                   },
-                  "uuid": "c1d12155-0631-4979-a0f5-0ea461c1ce43",
-                  "parentUUID": "588ed0f2-c34c-4548-9155-41d0630577c3",
+                  "uuid": "dc443c2b-d928-4b51-9f59-57cc23c57ee6",
+                  "parentUUID": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
                   "isHook": false,
                   "skipped": false
                 },
@@ -156,7 +156,7 @@
                   "title": "Tentar realizar cadastro de Médico com email já cadastrado",
                   "fullTitle": "Cadastro Cadastro sem sucesso Tentar realizar cadastro de Médico com email já cadastrado",
                   "timedOut": null,
-                  "duration": 4324,
+                  "duration": 4322,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -165,12 +165,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroMedicoComEmailJaCadastrado();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Cadastro.cadastroMedicoComEmailJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2414:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2253:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.\n    at Cadastro.cadastroMedicoComEmailJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2415:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2253:25)",
                     "diff": null
                   },
-                  "uuid": "728d1ee9-529a-45eb-a187-f25b374c3dab",
-                  "parentUUID": "588ed0f2-c34c-4548-9155-41d0630577c3",
+                  "uuid": "619f98a5-0326-4225-a3b4-e2f95254024b",
+                  "parentUUID": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
                   "isHook": false,
                   "skipped": false
                 },
@@ -178,7 +178,7 @@
                   "title": "Tentar realizar cadastro de Médico sem informar os dados obrigatórios",
                   "fullTitle": "Cadastro Cadastro sem sucesso Tentar realizar cadastro de Médico sem informar os dados obrigatórios",
                   "timedOut": null,
-                  "duration": 4350,
+                  "duration": 4324,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -187,12 +187,12 @@
                   "context": null,
                   "code": "_cadastro.default.cadastroMedicoSemInformarDadosObrigatorios();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<i class=\"icon menu-profile__indicator icon-chevron-fechado\"></i>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Cadastro.cadastroMedicoSemInformarDadosObrigatorios (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2428:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2256:25)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnSignUp`, but never found it.\n    at Cadastro.cadastroMedicoSemInformarDadosObrigatorios (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2429:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2256:25)",
                     "diff": null
                   },
-                  "uuid": "5c505443-f673-4e3c-a671-14f6b0978186",
-                  "parentUUID": "588ed0f2-c34c-4548-9155-41d0630577c3",
+                  "uuid": "950e0e29-3738-4572-98b8-dee8cf8fcdbe",
+                  "parentUUID": "f9011724-d6a0-43f1-8b1d-c0b35e593174",
                   "isHook": false,
                   "skipped": false
                 }
@@ -200,15 +200,15 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "66a851f6-5920-4b62-85c4-70837fcf87f7",
-                "7e03f6ed-48b0-4a22-b0ad-303b41f37001",
-                "c1d12155-0631-4979-a0f5-0ea461c1ce43",
-                "728d1ee9-529a-45eb-a187-f25b374c3dab",
-                "5c505443-f673-4e3c-a671-14f6b0978186"
+                "d1030bc4-ba16-4c9e-af26-4f0aaf849f0d",
+                "a52bd0ea-faa8-4448-b765-087a759b9925",
+                "dc443c2b-d928-4b51-9f59-57cc23c57ee6",
+                "619f98a5-0326-4225-a3b4-e2f95254024b",
+                "950e0e29-3738-4572-98b8-dee8cf8fcdbe"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 21760,
+              "duration": 21697,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
