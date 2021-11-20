@@ -10,12 +10,12 @@ class Login {
     cy.get(el.InputNumeroRegistro).should('be.visible').type('4163')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Doctor Four')
-
+    
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginFarmaceuticoComRegistro() {
@@ -26,12 +26,12 @@ class Login {
     cy.get(el.InputNumeroRegistro).should('be.visible').type('1234')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Farmaceutico')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginEnfermeiroComRegistro() {
@@ -42,12 +42,12 @@ class Login {
     cy.get(el.InputNumeroRegistro).should('be.visible').type('12333')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Enfermeio')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginNutricionistaComRegistro() {
@@ -58,12 +58,12 @@ class Login {
     cy.get(el.InputNumeroRegistro).should('be.visible').type('14959')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Nutricionista')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginFisioterapeutaComRegistro() {
@@ -74,12 +74,12 @@ class Login {
     cy.get(el.InputNumeroRegistro).should('be.visible').type('12345')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Fisioterapeuta')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginMedicoComEmail() {
@@ -90,12 +90,12 @@ class Login {
     cy.get(el.InputEmail).type('medico04@teste.com')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Doctor Four')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginFarmaceuticoComEmail() {
@@ -106,12 +106,12 @@ class Login {
     cy.get(el.InputEmail).should('be.visible').type('farmaceutico01@teste.com')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Farma')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginEnfermeiroComEmail() {
@@ -122,12 +122,12 @@ class Login {
     cy.get(el.InputEmail).should('be.visible').type('enfermeiro01@teste.com')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Enfermeio')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginNutricionistaComEmail() {
@@ -138,13 +138,13 @@ class Login {
     cy.get(el.InputEmail).should('be.visible').type('nutricionista01@teste.com')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Nutricionista')
 
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginFisioterapeutaComEmail() {
@@ -155,12 +155,12 @@ class Login {
     cy.get(el.InputEmail).should('be.visible').type('fisioterapeuta01@teste.com')
     cy.get(el.InputSenha).should('be.visible').type('123456')
     cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
     cy.get(el.ValidaLogin).should('contain', 'Fisioterapeuta')
 
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ButtonSairProfile).click({ force: true })
+   
   }
 
   loginSemDadosObrigatorios() {

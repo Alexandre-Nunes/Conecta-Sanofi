@@ -14,15 +14,16 @@ class Cadastro {
     cy.get(el.InputEmail).type(chance.email())
     cy.get(el.CheckBoxTermos).check()
     cy.get(el.ButtonEntrar).click({ force: true })
-    cy.wait(2000)
+    cy.wait(3000)
     cy.get(el.InputName).should('be.visible').type('Teste')
     cy.get(el.InputLastName).type(chance.last())
     cy.get(el.InputTelefone).type('48997778895')
     cy.get(el.InputSenha).type('123456', { force: true })
     cy.get(el.InputConfirmaSenha).type('123456', { force: true })
     cy.get(el.ButtonEntrar).click({ force: true })
-    cy.wait(500)
+    cy.wait(1000)
     cy.get(el.ValidaCadastro).should('contain.text', 'Bem-vindo Teste')
+    cy.wait(1000)
     cy.get(el.ButtonFecharModalLogin).click()
    
     cy.get(el.MenuProfile).click()
@@ -36,7 +37,8 @@ class Cadastro {
     cy.get(el.ButtonCriarContaProfile).click()
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).type('0000')
-    cy.get(el.InputEmail).type('medico04@teste.com')
+    cy.get(el.InputNumeroRegistro).should('be.visible').type(chance.phone())
+    cy.get(el.InputEmail).type('medico55@teste.com')
     cy.get(el.CheckBoxTermos).check()
     cy.get(el.ButtonEntrar).click({ force: true })
     cy.get(el.RegistroError).should('contain.text', 'CRM inválido no CFM')
@@ -62,7 +64,7 @@ class Cadastro {
     cy.get(el.InputEmail).should('be.visible').type(chance.email())
     cy.get(el.CheckBoxTermos).check()
     cy.get(el.ButtonEntrar).click({ force: true })
-    cy.get(el.RegistroJaCadastrado).should('contain.text', 'Olá, identificamos que você já tem uma conta')
+    cy.get(el.RegistroJaCadastrado).should('contain.text', 'Opa! Parece que você já está cadastrado aqui!')
     cy.get(el.ButtonFecharModalLogin).click()
   }
 
@@ -74,7 +76,7 @@ class Cadastro {
     cy.get(el.InputEmail).type('medico04@teste.com')
     cy.get(el.CheckBoxTermos).check()
     cy.get(el.ButtonEntrar).click({ force: true })
-    cy.get(el.EmailJaCadastrado).should('contain.text', 'Olá, identificamos que você já tem uma conta')
+    cy.get(el.EmailJaCadastrado).should('contain.text', 'Opa! Parece que você já está cadastrado aqui!')
     cy.get(el.ButtonFecharModalLogin).click()
   }
 

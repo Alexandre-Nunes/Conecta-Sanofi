@@ -9,10 +9,7 @@ class LoginSistema {
         cy.get(el.InputSenhaSistema).type('previewconecta')
         cy.wait(2000)  
         cy.get(el.ButtonLoginSistema).click()
-        cy.wait(2000)
-
-        cy.get(el.ValidaLogin).should('be.visible')
-          .should('contain', 'Doenças')
+        cy.wait(2000) 
     }
 }
 

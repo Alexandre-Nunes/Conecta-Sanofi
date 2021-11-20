@@ -9,10 +9,6 @@ describe('Login', () => {
     loginsistema.acessarSistema()
   })
 
-  afterEach(() => {
-    cy.screenshot()
-  })
-
   context('Login com sucesso', () => {
 
     it('Realizar login de Médico com número de registro', () => {

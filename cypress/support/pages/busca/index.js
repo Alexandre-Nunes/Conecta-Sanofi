@@ -44,9 +44,9 @@ class Busca {
   BuscaPorTermoComAcentuacaoePreposicao() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('Campanha de vacinação simultânea')
+      .type('Otimizando a vacinação em adolescentes')
     cy.get(el.ButtonBuscarHeader).click()
-    cy.get(el.RetornoBuscaTermoAcentuado).should('contain', 'Campanha de vacinação simultânea: Gripe & COVID-19')
+    cy.get(el.RetornoBuscaTermoAcentuado).should('have.text', 'Otimizando a vacinação em adolescentes: imunização em escolas')
   }
 }
 

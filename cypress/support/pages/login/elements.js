@@ -1,6 +1,6 @@
 export const ELEMENTS = {
    
-    MenuProfile: '.menu-profile__indicator',
+    MenuProfile: '.menu-profile__status',
     ButtonEntrarProfile: '.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin',
     ButtonSairProfile: '.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > .menu-profile__panel-item--danger',
     ButtonCriarContaProfile: '',

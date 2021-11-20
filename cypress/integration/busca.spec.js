@@ -8,10 +8,6 @@ before(() => {
     loginsistema.acessarSistema()
 })
 
-afterEach(() => {
-    cy.screenshot()
-})
-
 describe('Busca com usuário deslogado', () => {
 
     context('Busca com sucesso', () => {

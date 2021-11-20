@@ -9,10 +9,6 @@ describe('Cadastro', () => {
     loginsistema.acessarSistema()
   })
 
-  afterEach(() => {
-    cy.screenshot()
-  })
-
   context('Cadastro com sucesso', () => {
 
     it('Realizar cadastro de Nutricionista com sucesso', () => {

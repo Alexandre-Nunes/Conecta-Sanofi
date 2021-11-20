@@ -7,5 +7,5 @@ export const ELEMENTS = {
     RetornoError: 'Nenhum resultado para "cypress"',
     ValidaBuscaVazia: '.modal-search__grouped-products',
     RetornuBuscaParteTermo: 'body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(2)',
-    RetornoBuscaTermoAcentuado: ':nth-child(2) > .modal-search__result-title'
+    RetornoBuscaTermoAcentuado: ':nth-child(1) > .modal-search__result-title'
 }
