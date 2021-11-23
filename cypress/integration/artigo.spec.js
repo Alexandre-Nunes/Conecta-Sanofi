@@ -49,7 +49,7 @@ describe('Acessar Artigo com usuário logado', () => {
       cy.contains('Artigo Modular Teste home automatizada').click()
       cy.get('.c-hero-article__title').should('contain', 'Artigo Modular Teste')
 
-      cy.xpath("//div[contains(@class,'c-hero__icons')]//i[contains(@class,'favorite')]').click({ force: true })
+      cy.xpath("//div[contains(@class,'c-hero__icons')]//i[contains(@class,'favorite')]").click({ force: true })
       cy.wait(2000)
       cy.get('.grid-lg-11 > .c-text').should('have.text', 'Artigo adicionado à sua área pessoal')
 
