@@ -14,6 +14,18 @@ class Login {
     cy.get(el.ValidaLogin).should('contain', 'Doctor Four')
   }
 
+  loginFarmaceutico() {
+    cy.get(el.MenuProfile).click()
+    cy.get(el.ButtonEntrarProfile).click()
+    cy.get(el.SelectTipoHCP).select('Farmacêutico (CRF)')
+    cy.get(el.SelectEstado).select('RS')
+    cy.get(el.InputNumeroRegistro).should('be.visible').type('1234')
+    cy.get(el.InputSenha).should('be.visible').type('123456')
+    cy.get(el.ButtonEntrar).click({ force: true })
+    cy.wait(2000)
+    cy.get(el.ValidaLogin).should('contain', 'Farmaceutico')
+  }
+
   loginMedicoComRegistro() {
     cy.get(el.MenuProfile).click()
     cy.get(el.ButtonEntrarProfile).click()
@@ -27,7 +39,6 @@ class Login {
     
     cy.get(el.MenuProfile).click()
     cy.get(el.ButtonSairProfile).click({ force: true })
-   
   }
 
   loginFarmaceuticoComRegistro() {
@@ -43,7 +54,6 @@ class Login {
 
     cy.get(el.MenuProfile).click()
     cy.get(el.ButtonSairProfile).click({ force: true })
-   
   }
 
   loginEnfermeiroComRegistro() {
@@ -59,7 +69,6 @@ class Login {
 
     cy.get(el.MenuProfile).click()
     cy.get(el.ButtonSairProfile).click({ force: true })
-   
   }
 
   loginNutricionistaComRegistro() {
