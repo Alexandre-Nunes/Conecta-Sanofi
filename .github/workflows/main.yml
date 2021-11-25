@@ -27,6 +27,7 @@ jobs:
           node-vesion: ${{ matrix.node_version }}
            
       - run: npm install
+        continue-on-error: true
       - run: npm run cy:run
         continue-on-error: true
       - run: npm run report:merge
