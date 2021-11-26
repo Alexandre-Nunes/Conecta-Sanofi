@@ -5,12 +5,9 @@ class LoginSistema {
     acessarSistema() {
         cy.visit('/')
         cy.get(el.FecharBanner).click()
-        cy.get(el.InputUsuarioSistema).type('sanoficonecta')
-        cy.wait(2000)
-        cy.get(el.InputSenhaSistema).type('previewconecta')
-        cy.wait(2000)  
+        cy.get(el.InputUsuarioSistema).type('sanoficonecta', { delay: 100 })
+        cy.get(el.InputSenhaSistema).type('previewconecta', { delay: 100 })
         cy.get(el.ButtonLoginSistema).click()
-        cy.wait(2000) 
     }
 }
 

@@ -24,13 +24,11 @@ describe('Acessar Artigo com usuário deslogado', () => {
 
 describe('Acessar Artigo com usuário logado', () => {
 
-  beforeEach(() => {
-    login.loginMedico()
-  })
-
   context('Acessar artigo com sucesso', () => {
 
     it('Acessar artigo', () => {
+
+      login.loginMedico()
 
       cy.get('.c-navbar__area-logged > .c-navbar__item').click()
       cy.get('#modal-search-box').should('be.visible').type('Artigo Modular Teste home automatizada')
@@ -58,6 +56,13 @@ describe('Acessar Artigo com usuário logado', () => {
       cy.get("//div[contains(@class,'c-hero__icons')]//i[contains(@class,'favorite')]").click({ force: true })
       cy.wait(2000)
       cy.get('.grid-lg-11 > .c-text').should('have.text', 'Artigo removido à sua área pessoal')
+    })
+
+    it.only('Acessar artigo exclusivo', () => {
+
+      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
+     cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
+     cy.get('.c-base-modal-content__body > .c-text--h2').should('have.text', 'Conteúdo exclusivo para Médico e Farmacêutico')
     })
   })
 })
