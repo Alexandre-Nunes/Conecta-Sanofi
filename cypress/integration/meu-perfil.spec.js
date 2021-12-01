@@ -13,12 +13,13 @@ describe('Meu Perfil', () => {
 
         cy.get('.menu-profile__indicator').click()
         cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
+        cy.wait(2000)
         cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
         cy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
             .type('51987165588{enter}')
-        cy.wait(2000)
-        cy.get('.c-my-profile__save-container--btn').click()
-
+        cy.get(':nth-child(2) > #profile').click()
+      
+    
         // Falta validacão, pois não temos um feedback ao salvar a alteração.
     })
 
@@ -61,9 +62,11 @@ describe('Meu Perfil', () => {
 
         cy.get('.menu-profile__indicator').click()
         cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
+        cy.wait(2000)
         cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
         cy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
             .type('testemedico{enter}')
+        cy.get(':nth-child(2) > #profile').click()
         cy.get(':nth-child(4) > .form-element > .form-element__error-message').should('have.text', 'E-mail inválido')
     })
 

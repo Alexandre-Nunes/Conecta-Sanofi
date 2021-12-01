@@ -76,8 +76,7 @@ describe('Recuperar Senha', () => {
         
             
         cy.get('#sf-phone').type('489977777777')
-        cy.get('.c-base-modal-content__paper').click()
-
+     
         cy.get('#lf-email').type('ABc123@teste')
         cy.get('#sf-continue-validation').click()
 
