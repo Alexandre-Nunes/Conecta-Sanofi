@@ -2,7 +2,7 @@
 
 import login from '../support/pages/login'
 import loginsistema from '../support/pages/login-sistema'
-
+import meuperfil from '../support/pages/meu-perfil'
 beforeEach(() => {
     loginsistema.acessarSistema()
 })
@@ -10,13 +10,10 @@ beforeEach(() => {
 describe('Meu Perfil', () => {
     it('Alterar numero do celular', () => {
         login.loginMedico()
+        meuperfil.AcessarMinhaConta()
 
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
-        cy.wait(2000)
-        cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
         cy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
-            .type('51987165588{enter}')
+          .type('51987165588{enter}')
         cy.get(':nth-child(2) > #profile').click()
       
     
@@ -25,10 +22,8 @@ describe('Meu Perfil', () => {
 
     it('Alterar numero do celular utilizando um numero inválido', () => {
         login.loginMedico()
+        meuperfil.AcessarMinhaConta()
 
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
-        cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
         cy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
             .type('00111111111{enter}')
         cy.get(':nth-child(3) > .form-element > .form-element__error-message').should('have.text', 'Celular inválido')
@@ -36,20 +31,15 @@ describe('Meu Perfil', () => {
 
     it('Alterar email', () => {
         login.loginMedico()
+        meuperfil.AcessarMinhaConta()
 
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
-        cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
         cy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
             .type('medico04@teste.com.br{enter}')
     })
 
     it('Tentar alterar email ja existente', () => {
         login.loginMedico()
-
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > [href="/perfil"]').click()
-        cy.get(':nth-child(2) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click()
+        meuperfil.AcessarMinhaConta()
         cy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear()
             .type('testemedico@grr.la{enter}')
         cy.wait(2000)

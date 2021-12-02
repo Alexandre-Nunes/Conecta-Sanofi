@@ -1,6 +1,7 @@
 /// <reference types="cypress"/>
 import loginsistema from '../support/pages/login-sistema'
 import login from '../support/pages/login'
+import artigo from '../support/pages/artigo'
 
 beforeEach(() => {
   loginsistema.acessarSistema()
@@ -11,13 +12,7 @@ describe('Acessar Artigo com usuário deslogado', () => {
   context('Acessar artigo com sucesso', () => {
 
     it('Acessar artigo', () => {
-
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
-      cy.get('#modal-search-box').should('be.visible').type('Artigo Modular Teste home automatizada')
-      cy.get('.grid-lg-10 > .modal-search__icon').click()
-      cy.wait(2000)
-      cy.contains('Artigo Modular Teste home automatizada').click()
-      cy.get('.c-hero-article__title').should('contain', 'Artigo Modular Teste')
+      artigo.AcessarArtigo()
     })
   })
 })
@@ -29,23 +24,12 @@ describe('Acessar Artigo com usuário logado', () => {
     it('Acessar artigo', () => {
 
       login.loginMedico()
-
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
-      cy.get('#modal-search-box').should('be.visible').type('Artigo Modular Teste home automatizada')
-      cy.get('.grid-lg-10 > .modal-search__icon').click()
-      cy.wait(2000)
-      cy.contains('Artigo Modular Teste home automatizada').click()
-      cy.get('.c-hero-article__title').should('contain', 'Artigo Modular Teste')
+      artigo.AcessarArtigo()
     })
 
     it.skip('Adicionar e Retirar Artigo dos favoritos', () => {
 
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
-      cy.get('#modal-search-box').should('be.visible').type('Artigo Modular Teste home automatizada')
-      cy.get('.grid-lg-10 > .modal-search__icon').click()
-      cy.wait(2000)
-      cy.contains('Artigo Modular Teste home automatizada').click()
-      cy.get('.c-hero-article__title').should('contain', 'Artigo Modular Teste')
+      artigo.AcessarArtigo()
 
       cy.xpath("//div[contains(@class,'c-hero__icons')]//i[contains(@class,'favorite')]").click({ force: true })
       cy.wait(2000)
