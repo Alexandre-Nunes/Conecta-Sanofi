@@ -11,9 +11,9 @@ describe('Calendario', () => {
     it('Acessar evento com data passada, como medico', () => {
         login.loginMedico()
         cy.get('[href="/calendario"] > p').click()
-        cy.contains('Aula Médica isatuximabe – Dr. Edvan Crusoé').click()
+        cy.contains('HipoTalks').click()
 
-        cy.get('.c-text--h1').should('contain', 'Aula Médica isatuximabe')
+        cy.get('.c-text--h1').should('contain', 'HipoTalks')
     })
 
     it('Acessar evento com data futura, como medico', () => {
