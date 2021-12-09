@@ -9,8 +9,8 @@ beforeEach(() => {
 
 describe('Recuperar Senha', () => {
     it('Esqueci minha senha', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#uf').select('SC')
         cy.get('#lf-registro').type('11655')
@@ -19,8 +19,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Tentar recuperar senha utilizando Número do registro invalido', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#uf').select('SC')
         cy.get('#lf-registro').type('7777')
@@ -29,8 +29,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Reenviar email de recuperacao de senha', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#uf').select('SC')
         cy.get('#lf-registro').type('11655')
@@ -41,8 +41,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Alterar email de recuperacao de senha', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#hcp-type').select('Farmacêutico (CRF)')
         cy.get('#uf').select('RS')
@@ -63,8 +63,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Tentar alterar email de recuperacao de senha utilizando Email invalido', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#hcp-type').select('Farmacêutico (CRF)')
         cy.get('#uf').select('RS')
@@ -84,8 +84,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Tentar alterar email de recuperacao de senha utilizando Email ja existente', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#hcp-type').select('Farmacêutico (CRF)')
         cy.get('#uf').select('RS')
@@ -106,8 +106,8 @@ describe('Recuperar Senha', () => {
     })
 
     it('Verificar obrigatoriedade dos campos UF e Registro ao Recuperar senha', () => {
-        cy.get('.menu-profile__indicator').click()
-        cy.get('.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin').click()
+        cy.get('.header__login > :nth-child(1)').click()
+        cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
         cy.get('#sf-email-different').click({force:true})
         cy.get('#uf-error').should('have.text', 'Escolher Estado')

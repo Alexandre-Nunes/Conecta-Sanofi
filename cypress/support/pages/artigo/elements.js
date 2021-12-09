@@ -1,6 +1,6 @@
 export const ELEMENTS = {
 
-    LinkBuscaHeader: '.c-navbar__area-logged > .c-navbar__item',
+    LinkBuscaHeader: '.header__search > :nth-child(1)',
     InputBuscaHeader: '#modal-search-box',
     ButtonBuscarHeader: '.grid-lg-10 > .modal-search__icon',
     RetornoBusca: 'Artigo Modular Teste home automatizada',

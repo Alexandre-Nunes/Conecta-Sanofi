@@ -1,8 +1,9 @@
 export const ELEMENTS = {
    
-    MenuProfile: '.menu-profile__status',
-    ButtonEntrarProfile: '.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > #btnLogin',
-    ButtonSairProfile: '.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > .menu-profile__panel-item--danger',
+    MenuProfile: '.header__login > :nth-child(1)',
+    MenuProfilesair: '.header__profile',
+    ButtonEntrarProfile: '.menu-drawer__signin',
+    ButtonSairProfile: '.menu-drawer__signout > span',
     ButtonCriarContaProfile: '',
     LinkSobre: '',
     RadioRegistro: '',

@@ -44,20 +44,19 @@ describe('Acessar Artigo com usuário logado', () => {
 
     it('Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado', () => {
 
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
       cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
       cy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico')
     })
 
     it('Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão', () => {
       login.loginFisioterapeutaComRegistro()
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
+      //cy.get('.c-navbar__area-logged > .c-navbar__item').click()
       cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
       cy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico')
     })
 
     it('Tentar acessar artigo exclusivo, com Soft Login', () => {
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
+      //cy.get('.c-navbar__area-logged > .c-navbar__item').click()
       cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
       cy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico')
 
@@ -77,7 +76,7 @@ describe('Acessar Artigo com usuário logado', () => {
 
     it('Acessar artigo exclusivo para médico e farmacêutico, utilizando perfil de Farmacêutico', () => {
       login.loginFarmaceutico()
-      cy.get('.c-navbar__area-logged > .c-navbar__item').click()
+      //cy.get('.c-navbar__area-logged > .c-navbar__item').click()
       cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
       cy.get('.c-hero-article__title').should('contain', 'Resultados do cemiplimabe')
     })

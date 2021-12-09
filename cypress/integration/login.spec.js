@@ -5,7 +5,7 @@ import loginsistema from '../support/pages/login-sistema'
 
 describe('Login', () => {
 
-  before(() => {
+  beforeEach(() => {
     loginsistema.acessarSistema()
   })
 
