@@ -10,6 +10,11 @@ beforeEach(() => {
 describe('Acessar Artigo com usuário deslogado', () => {
 
   context('Acessar artigo com sucesso', () => {
+    it('Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado', () => {
+      cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
+      cy.get('.c-base-modal-content__paper').should('be.visible')
+      cy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico')
+    })
 
     it('Acessar artigo', () => {
       artigo.AcessarArtigo()
@@ -40,12 +45,6 @@ describe('Acessar Artigo com usuário logado', () => {
       cy.get("//div[contains(@class,'c-hero__icons')]//i[contains(@class,'favorite')]").click({ force: true })
       cy.wait(2000)
       cy.get('.grid-lg-11 > .c-text').should('have.text', 'Artigo removido à sua área pessoal')
-    })
-
-    it('Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado', () => {
-
-      cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada')
-      cy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico')
     })
 
     it('Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão', () => {

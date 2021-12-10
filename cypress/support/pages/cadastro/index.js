@@ -7,7 +7,7 @@ class Cadastro {
 
   cadastroNutricionista() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.SelectTipoHCP).select('Nutricionista (CRN)')
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).type(chance.phone())
@@ -15,26 +15,21 @@ class Cadastro {
     cy.get(el.CheckBoxTermos).check()
     cy.get(el.ButtonEntrar).click({ force: true })
     cy.wait(3000)
-    cy.get(el.InputName).should('be.visible').type('Teste')
+    cy.get(el.InputName).should('be.visible')
+      .type('Teste')
     cy.get(el.InputLastName).type(chance.last())
     cy.get(el.InputTelefone).type('48997778895')
     cy.get(el.InputSenha).type('123456', { force: true })
     cy.get(el.InputConfirmaSenha).type('123456', { force: true })
     cy.get(el.ButtonEntrar).click({ force: true })
     cy.wait(1000)
-    cy.get(el.ValidaCadastro).should('contain.text', 'Bem-vindo Teste')
-    cy.wait(1000)
-    cy.get(el.ButtonFecharModalLogin).click()
-   
-    cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonSairProfile).click()
-    cy.get(el.ValidaLogout).should('be.visible')
-      .should('contain', 'Doenças')
+    cy.get(el.ValidaCadastro).should('be.visible')
+      .should('contain.text', 'Bem-vindo Teste')
   }
 
   cadastroMedicoComRegistroInvalido() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).type('0000')
     cy.get(el.InputNumeroRegistro).should('be.visible').type(chance.phone())
@@ -47,7 +42,7 @@ class Cadastro {
 
   cadastroMedicoSemAceitarTermos() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).should('be.visible').type(chance.phone())
     cy.get(el.InputEmail).should('be.visible').type(chance.email())
@@ -58,7 +53,7 @@ class Cadastro {
 
   cadastroMedicoComRegistroJaCadastrado() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).type('4163')
     cy.get(el.InputEmail).should('be.visible').type(chance.email())
@@ -70,7 +65,7 @@ class Cadastro {
 
   cadastroMedicoComEmailJaCadastrado() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.SelectEstado).select('BA')
     cy.get(el.InputNumeroRegistro).type('12345')
     cy.get(el.InputEmail).type('medico04@teste.com')
@@ -82,7 +77,7 @@ class Cadastro {
 
   cadastroMedicoSemInformarDadosObrigatorios() {
     cy.get(el.MenuProfile).click()
-    cy.get(el.ButtonCriarContaProfile).click()
+    cy.get('.menu-drawer__signup').click()
     cy.get(el.ButtonEntrar).click({ force: true })
     cy.get(el.UFError).should('contain.text', 'Escolher Estado')
     cy.get(el.RegistroError).should('contain.text', 'Favor informar seu número de registro')

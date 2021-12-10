@@ -28,7 +28,7 @@ describe('Recuperar Senha', () => {
         cy.get('#generic-error').should('have.text', 'Registro não localizado')
     })
 
-    it('Reenviar email de recuperacao de senha', () => {
+    it('Reenviar email de recuperação de senha', () => {
         cy.get('.header__login > :nth-child(1)').click()
         cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
@@ -40,7 +40,7 @@ describe('Recuperar Senha', () => {
         cy.get('#lf-resend-mail').should('have.text', 'E-mail enviado!')
     })
 
-    it('Alterar email de recuperacao de senha', () => {
+    it('Alterar email de recuperação de senha', () => {
         cy.get('.header__login > :nth-child(1)').click()
         cy.get('.menu-drawer__signin').click()
         cy.get('#forgot-pass').click()
@@ -55,7 +55,7 @@ describe('Recuperar Senha', () => {
             
         cy.get('#sf-phone').type('489977777777')
         cy.get('.c-base-modal-content__paper').click()
-
+        cy.wait(2000)
         cy.get('#lf-email').type('medicorenovaemail@servidor.com')
         cy.get('#sf-continue-validation').click()
 

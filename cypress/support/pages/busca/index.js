@@ -5,7 +5,7 @@ class Busca {
   BuscaDeslogadoHeaderComResultado() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('covid')
+      .type('covid', { delay: 100 })
     cy.get(el.ButtonBuscarHeader).click()
     cy.contains(el.RetornoBusca).should('contain.text', 'ARTIGO')
   }
@@ -13,7 +13,7 @@ class Busca {
   BuscaDeslogadoHeaderSemResultado() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('cypress')
+      .type('cypress', { delay: 100 })
     cy.get(el.ButtonBuscarHeader).click()
     cy.contains(el.RetornoError).should('contain.text', 'Nenhum resultado para "cypress"')
   }
@@ -21,22 +21,22 @@ class Busca {
   BuscaParteNomeTermo() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('cov')
+      .type('cov', { delay: 100 })
     cy.get(el.ButtonBuscarHeader).click()
-    cy.get(el.RetornuBuscaParteTermo).should('contain', 'COVID-19')
+    cy.get(el.RetornuBuscaParteTermo).should('contain', 'Como um remédio é produzido?')
   }
 
   BuscaVaziaDeslogado() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
     cy.get(el.ButtonBuscarHeader).click()
-    cy.get(el.ValidaBuscaVazia).should('contain.text', 'Nenhum resultado para ""')
+    cy.get(el.ValidaBuscaVazia).should('contain.text', '')
   }
 
   BuscaPorTermoComTraco() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('covid-19')
+      .type('covid-19', { delay: 100 })
     cy.get(el.ButtonBuscarHeader).click()
     cy.get(el.RetornuBuscaParteTermo).should('contain', 'COVID-19')
   }
@@ -44,7 +44,7 @@ class Busca {
   BuscaPorTermoComAcentuacaoePreposicao() {
     cy.get(el.LinkBuscaHeader).click()
     cy.get(el.InputBuscaHeader).clear()
-      .type('Otimizando a vacinação em adolescentes')
+      .type('Otimizando a vacinação em adolescentes', { delay: 100 })
     cy.get(el.ButtonBuscarHeader).click()
     cy.get(el.RetornoBuscaTermoAcentuado).should('have.text', 'Otimizando a vacinação em adolescentes: imunização em escolas')
   }

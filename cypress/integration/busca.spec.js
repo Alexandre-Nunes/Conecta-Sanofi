@@ -4,7 +4,7 @@ import busca from '../support/pages/busca'
 import loginsistema from '../support/pages/login-sistema'
 import login from '../support/pages/login'
 
-before(() => {
+beforeEach(() => {
     loginsistema.acessarSistema()
 })
 

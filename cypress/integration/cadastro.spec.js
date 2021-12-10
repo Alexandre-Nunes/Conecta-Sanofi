@@ -3,20 +3,11 @@
 import loginsistema from '../support/pages/login-sistema'
 import cadastro from '../support/pages/cadastro'
 
+beforeEach(() => {
+  loginsistema.acessarSistema()
+})
+
 describe('Cadastro', () => {
-
-  before(() => {
-    loginsistema.acessarSistema()
-  })
-
-  context('Cadastro com sucesso', () => {
-
-    it('Realizar cadastro de Nutricionista com sucesso', () => {
-      cadastro.cadastroNutricionista()
-    })
-  })
-
-  context('Cadastro sem sucesso', () => {
 
     it('Tentar realizar cadastro de Médico com registro invalido', () => {
       cadastro.cadastroMedicoComRegistroInvalido()
@@ -37,5 +28,9 @@ describe('Cadastro', () => {
     it('Tentar realizar cadastro de Médico sem informar os dados obrigatórios', () => {
       cadastro.cadastroMedicoSemInformarDadosObrigatorios()
     })
+
+    it('Realizar cadastro de Nutricionista com sucesso', () => {
+      cadastro.cadastroNutricionista()
+    })
   })
-})
+

@@ -1,9 +1,9 @@
 export const ELEMENTS = {
    
-    MenuProfile: '.menu-profile__status',
-    ButtonEntrarProfile: 'Criar conta',
-    ButtonSairProfile: '.menu-profile > #menu-profile-panel > .menu-profile__panel-content > .menu-profile__panel-row > .menu-profile__panel-item--danger',
-    ButtonCriarContaProfile: '',
+    MenuProfile: '.header__login > :nth-child(1)',
+    ButtonEntrarProfile: '.menu-drawer__signup',
+    ButtonSairProfile: '.menu-drawer__signout > span',
+    ButtonCriarContaProfile: '.menu-drawer__signup',
     LinkSobre: '',
     CheckBoxTermos: '#opt-in',
     RadioRegistro: '',
