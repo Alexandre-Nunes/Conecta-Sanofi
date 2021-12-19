@@ -1,0 +1,169 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-19T08:15:23.005Z",
+    "end": "2021-12-19T08:15:44.446Z",
+    "duration": 21441,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c828c974-c90f-45bd-a2d5-53723d64e809",
+      "title": "",
+      "fullFile": "cypress/integration/calendario.spec.js",
+      "file": "cypress/integration/calendario.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "043294f1-8706-4429-9218-67c699a9a4eb",
+          "title": "Calendario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar evento com data passada, como medico",
+              "fullTitle": "Calendario Acessar evento com data passada, como medico",
+              "timedOut": null,
+              "duration": 21364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('HipoTalks').click();\ncy.get('.c-text--h1').should('contain', 'HipoTalks');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-internal-login__login-button`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-internal-login__login-button`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:210:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:125:25)",
+                "diff": null
+              },
+              "uuid": "eeeda613-e993-411f-ae03-3dc09a808813",
+              "parentUUID": "043294f1-8706-4429-9218-67c699a9a4eb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Acessar evento com data futura, como medico",
+              "fullTitle": "Calendario Acessar evento com data futura, como medico",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('Evento Zinpass Eze 2021 - Automação Data Futura').click();\ncy.get('.c-text--h1').should('contain', 'Evento Automação Data Futura');",
+              "err": {},
+              "uuid": "c54143e1-ab80-49eb-a5e5-95feafb88329",
+              "parentUUID": "043294f1-8706-4429-9218-67c699a9a4eb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Adicionar evento ao calendário, como medico",
+              "fullTitle": "Calendario Adicionar evento ao calendário, como medico",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.get('#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule').click();\ncy.get('.c-dropdown > ul > :nth-child(2)').click(); // Falta validação, na outra aba.",
+              "err": {},
+              "uuid": "9a70c79d-6994-4bb9-9fd4-89385ee2a45b",
+              "parentUUID": "043294f1-8706-4429-9218-67c699a9a4eb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Acessar evento ao vivo, como medico",
+              "fullTitle": "Calendario Acessar evento ao vivo, como medico",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click(); // Falta criar evento ao vivo",
+              "err": {},
+              "uuid": "c72feebb-06da-4151-9ec2-5574ca099aab",
+              "parentUUID": "043294f1-8706-4429-9218-67c699a9a4eb",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eeeda613-e993-411f-ae03-3dc09a808813"
+          ],
+          "pending": [],
+          "skipped": [
+            "c54143e1-ab80-49eb-a5e5-95feafb88329",
+            "9a70c79d-6994-4bb9-9fd4-89385ee2a45b",
+            "c72feebb-06da-4151-9ec2-5574ca099aab"
+          ],
+          "duration": 21364,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
