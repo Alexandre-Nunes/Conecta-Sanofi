@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-01-01T08:17:01.123Z",
-    "end": "2022-01-01T08:17:20.579Z",
-    "duration": 19456,
+    "start": "2022-01-02T08:17:03.967Z",
+    "end": "2022-01-02T08:17:24.855Z",
+    "duration": 20888,
     "testsRegistered": 7,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ce05037a-cd73-4bba-8439-1be74533c6b1",
+      "uuid": "5d45d180-cdda-47a4-9969-ed7b1e095887",
       "title": "",
       "fullFile": "cypress/integration/recuperar-senha.js",
       "file": "cypress/integration/recuperar-senha.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+          "uuid": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
           "title": "Recuperar Senha",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Esqueci minha senha",
               "fullTitle": "Recuperar Senha Esqueci minha senha",
               "timedOut": null,
-              "duration": 19396,
+              "duration": 20807,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-internal-login__login-button`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:292:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:125:25)",
                 "diff": null
               },
-              "uuid": "c52ee3d6-2cca-4eae-b55a-08a9df92fcd2",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "4e3408f1-9314-4986-9b55-14b628031b24",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#uf').select('SC');\ncy.get('#lf-registro').type('7777');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('#generic-error').should('have.text', 'Registro não localizado');",
               "err": {},
-              "uuid": "0898de23-6a9a-4068-b64c-630ad67b14eb",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "c91a9d1e-60e3-4282-ba5c-18dbba2932ff",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#uf').select('SC');\ncy.get('#lf-registro').type('11655');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');\ncy.get('#lf-resend-mail').click();\ncy.get('#lf-resend-mail').should('have.text', 'E-mail enviado!');",
               "err": {},
-              "uuid": "0d64a1bc-5e0c-4a6f-8780-187d47aaa212",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "2d7c05ab-4b8f-492a-af60-ed26d4430c94",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#hcp-type').select('Farmacêutico (CRF)');\ncy.get('#uf').select('RS');\ncy.get('#lf-registro').type('1234');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');\ncy.get('.c-base-modal-content__body > :nth-child(8) > span').click({\n  force: true\n});\ncy.get('.c-text--h2 > strong').should('have.text', 'Habilitar novo Email');\ncy.get('#sf-phone').type('489977777777');\ncy.get('.c-base-modal-content__paper').click();\ncy.wait(2000);\ncy.get('#lf-email').type('medicorenovaemail@servidor.com');\ncy.get('#sf-continue-validation').click();\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');",
               "err": {},
-              "uuid": "19227211-457e-4f03-9dc9-86ab230b1387",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "941724fa-b58c-4bb3-9785-24813d4a20d5",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#hcp-type').select('Farmacêutico (CRF)');\ncy.get('#uf').select('RS');\ncy.get('#lf-registro').type('1234');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');\ncy.get('.c-base-modal-content__body > :nth-child(8) > span').click({\n  force: true\n});\ncy.get('.c-text--h2 > strong').should('have.text', 'Habilitar novo Email');\ncy.get('#sf-phone').type('489977777777');\ncy.get('#lf-email').type('ABc123@teste');\ncy.get('#sf-continue-validation').click();\ncy.get('.c-base-modal__text-error').should('have.text', 'Email inválido');",
               "err": {},
-              "uuid": "5278abef-326b-452b-8976-ad27ff67c02d",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "e685076f-031e-4693-9a24-50cd95b96d24",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#hcp-type').select('Farmacêutico (CRF)');\ncy.get('#uf').select('RS');\ncy.get('#lf-registro').type('1234');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');\ncy.get('.c-base-modal-content__body > :nth-child(8) > span').click({\n  force: true\n});\ncy.get('.c-text--h2 > strong').should('have.text', 'Habilitar novo Email');\ncy.get('#sf-phone').type('489977777777');\ncy.get('.c-base-modal-content__paper').click();\ncy.get('#lf-email').type('maria@teste.com');\ncy.get('#sf-continue-validation').click();\ncy.get('.c-base-modal__text-error').should('have.text', 'Já existe um usuário com este e-mail');",
               "err": {},
-              "uuid": "1dbf8117-c6d7-48c3-a793-1aee4d8cd0a0",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "2c351364-ab00-4e3f-959b-be2a206f33e0",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             },
@@ -159,8 +159,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('#uf-error').should('have.text', 'Escolher Estado');\ncy.get('#registro-error').should('have.text', 'Favor informar seu número de registro');",
               "err": {},
-              "uuid": "84cc4487-64ff-414b-9b76-80c8ffa72486",
-              "parentUUID": "761888d3-5fef-4bc0-b423-1a740d15c7c8",
+              "uuid": "a876e946-1719-49d8-92e5-34d7c4e17e3d",
+              "parentUUID": "dd18cbfb-6bfd-4b97-9332-0789e4aa2b1e",
               "isHook": false,
               "skipped": true
             }
@@ -168,18 +168,18 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "c52ee3d6-2cca-4eae-b55a-08a9df92fcd2"
+            "4e3408f1-9314-4986-9b55-14b628031b24"
           ],
           "pending": [],
           "skipped": [
-            "0898de23-6a9a-4068-b64c-630ad67b14eb",
-            "0d64a1bc-5e0c-4a6f-8780-187d47aaa212",
-            "19227211-457e-4f03-9dc9-86ab230b1387",
-            "5278abef-326b-452b-8976-ad27ff67c02d",
-            "1dbf8117-c6d7-48c3-a793-1aee4d8cd0a0",
-            "84cc4487-64ff-414b-9b76-80c8ffa72486"
+            "c91a9d1e-60e3-4282-ba5c-18dbba2932ff",
+            "2d7c05ab-4b8f-492a-af60-ed26d4430c94",
+            "941724fa-b58c-4bb3-9785-24813d4a20d5",
+            "e685076f-031e-4693-9a24-50cd95b96d24",
+            "2c351364-ab00-4e3f-959b-be2a206f33e0",
+            "a876e946-1719-49d8-92e5-34d7c4e17e3d"
           ],
-          "duration": 19396,
+          "duration": 20807,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
