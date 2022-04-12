@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 4,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 4,
-    "start": "2022-04-11T08:21:09.565Z",
-    "end": "2022-04-11T08:22:23.926Z",
-    "duration": 74361,
+    "failures": 3,
+    "start": "2022-04-12T08:22:18.914Z",
+    "end": "2022-04-12T08:23:43.404Z",
+    "duration": 84490,
     "testsRegistered": 4,
-    "passPercent": 0,
+    "passPercent": 25,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f256e368-cc60-4500-a1e4-644bc3330051",
+      "uuid": "4bc137b6-f6ea-4b07-a320-195a4a06e7a6",
       "title": "",
       "fullFile": "cypress/integration/calendario.spec.js",
       "file": "cypress/integration/calendario.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bded79ea-d849-4c82-aed1-19894e78b248",
+          "uuid": "cf329f80-6a8b-44d9-add7-ef7ec153c1db",
           "title": "Calendario",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Acessar evento com data passada, como medico",
               "fullTitle": "Calendario Acessar evento com data passada, como medico",
               "timedOut": null,
-              "duration": 27422,
+              "duration": 32081,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HipoTalks' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:132:8)",
                 "diff": null
               },
-              "uuid": "91d6461b-b38c-4661-be71-a087b44b2792",
-              "parentUUID": "bded79ea-d849-4c82-aed1-19894e78b248",
+              "uuid": "aa76b995-bf14-4922-ace6-89a1b6f87751",
+              "parentUUID": "cf329f80-6a8b-44d9-add7-ef7ec153c1db",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "Acessar evento com data futura, como medico",
               "fullTitle": "Calendario Acessar evento com data futura, como medico",
               "timedOut": null,
-              "duration": 15496,
+              "duration": 18367,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Evento Zinpass Eze 2021 - Automação Data Futura' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:139:8)",
                 "diff": null
               },
-              "uuid": "ee784f6b-11e4-47b4-8f3c-ffe864fc2428",
-              "parentUUID": "bded79ea-d849-4c82-aed1-19894e78b248",
+              "uuid": "58f57bc2-2879-4081-a120-4193aac695b6",
+              "parentUUID": "cf329f80-6a8b-44d9-add7-ef7ec153c1db",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "Adicionar evento ao calendário, como medico",
               "fullTitle": "Calendario Adicionar evento ao calendário, como medico",
               "timedOut": null,
-              "duration": 16234,
+              "duration": 18599,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -95,8 +95,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:146:8)",
                 "diff": null
               },
-              "uuid": "8dbead6a-fe34-4442-a7f7-ffab2f9cdb4d",
-              "parentUUID": "bded79ea-d849-4c82-aed1-19894e78b248",
+              "uuid": "3097cb54-7328-4abf-b54c-92c77ada492e",
+              "parentUUID": "cf329f80-6a8b-44d9-add7-ef7ec153c1db",
               "isHook": false,
               "skipped": false
             },
@@ -104,36 +104,33 @@
               "title": "Acessar evento ao vivo, como medico",
               "fullTitle": "Calendario Acessar evento ao vivo, como medico",
               "timedOut": null,
-              "duration": 14994,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 15112,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click(); // Falta criar evento ao vivo",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:294:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:150:20)",
-                "diff": null
-              },
-              "uuid": "ffb6841b-572e-4fdf-bdd7-40449d28a67f",
-              "parentUUID": "bded79ea-d849-4c82-aed1-19894e78b248",
+              "err": {},
+              "uuid": "81b03989-6e85-44f0-afcf-6f2323cf6f75",
+              "parentUUID": "cf329f80-6a8b-44d9-add7-ef7ec153c1db",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "81b03989-6e85-44f0-afcf-6f2323cf6f75"
+          ],
           "failures": [
-            "91d6461b-b38c-4661-be71-a087b44b2792",
-            "ee784f6b-11e4-47b4-8f3c-ffe864fc2428",
-            "8dbead6a-fe34-4442-a7f7-ffab2f9cdb4d",
-            "ffb6841b-572e-4fdf-bdd7-40449d28a67f"
+            "aa76b995-bf14-4922-ace6-89a1b6f87751",
+            "58f57bc2-2879-4081-a120-4193aac695b6",
+            "3097cb54-7328-4abf-b54c-92c77ada492e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 74146,
+          "duration": 84159,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
