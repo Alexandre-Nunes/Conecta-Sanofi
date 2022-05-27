@@ -1,0 +1,303 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 10,
+    "passes": 4,
+    "pending": 0,
+    "failures": 6,
+    "start": "2022-05-27T08:27:29.344Z",
+    "end": "2022-05-27T08:31:19.198Z",
+    "duration": 229854,
+    "testsRegistered": 10,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fda56479-88e2-46b7-a094-9743353fb126",
+      "title": "",
+      "fullFile": "cypress/integration/meu-perfil.spec.js",
+      "file": "cypress/integration/meu-perfil.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+          "title": "Meu Perfil",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alterar senha",
+              "fullTitle": "Meu Perfil Alterar senha",
+              "timedOut": null,
+              "duration": 33349,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get('.c-my-profile__section-form-buttons > .c-my-profile__button').click();\ncy.get('.modal-change-password__form > :nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('123456');\ncy.get('.modal-change-password__form > :nth-child(2) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('123456');\ncy.get('.modal-change-password__form-buttons > button').click({\n  force: true\n});\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:135:8)",
+                "diff": null
+              },
+              "uuid": "eb6174ab-73f0-40c1-bc84-a7ddd10f91ac",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tentar alterar senha, utilizando uma senha com menos de seis caracteres",
+              "fullTitle": "Meu Perfil Tentar alterar senha, utilizando uma senha com menos de seis caracteres",
+              "timedOut": null,
+              "duration": 21415,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get('.c-my-profile__section-form-buttons > .c-my-profile__button').click();\ncy.get('.modal-change-password__form > :nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('123');\ncy.contains('Senha inválida').should('have.text', 'Senha inválida');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:148:8)",
+                "diff": null
+              },
+              "uuid": "d3392c4b-e903-4099-a65a-4835f8318a32",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tentar alterar senha, utilizando a senha de confirmação diferente",
+              "fullTitle": "Meu Perfil Tentar alterar senha, utilizando a senha de confirmação diferente",
+              "timedOut": null,
+              "duration": 21014,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get('.c-my-profile__section-form-buttons > .c-my-profile__button').click();\ncy.get('.modal-change-password__form > :nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('Teste@123');\ncy.get('.modal-change-password__form > :nth-child(2) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('Teste@999');\ncy.get('.modal-change-password__form-buttons > button').click({\n  force: true\n});\ncy.contains('Os Passwords digitados estão diferentes.').should('have.text', 'Os Passwords digitados estão diferentes.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__section-form-buttons > .c-my-profile__button`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:157:8)",
+                "diff": null
+              },
+              "uuid": "b2399f8d-fe37-47ce-a9b5-f9e0494e5833",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alterar numero do celular",
+              "fullTitle": "Meu Perfil Alterar numero do celular",
+              "timedOut": null,
+              "duration": 19077,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('51987165588{enter}');\ncy.get(':nth-child(2) > #profile').click(); // Falta validacão, pois não temos um feedback ao salvar a alteração.",
+              "err": {},
+              "uuid": "11af6c72-3be6-40f6-a15b-a8df9668cb85",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alterar numero do celular utilizando um numero inválido",
+              "fullTitle": "Meu Perfil Alterar numero do celular utilizando um numero inválido",
+              "timedOut": null,
+              "duration": 20859,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('00111111111{enter}');\ncy.get(':nth-child(3) > .form-element > .form-element__error-message').should('have.text', 'Celular inválido');",
+              "err": {},
+              "uuid": "279f7d88-e6fa-4302-aee4-5b79a00c097b",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alterar email",
+              "fullTitle": "Meu Perfil Alterar email",
+              "timedOut": null,
+              "duration": 19585,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('medico04@teste.com.br{enter}');",
+              "err": {},
+              "uuid": "d5992696-3304-423c-8fe2-5dfc14179782",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alterar email utilizando email inválido",
+              "fullTitle": "Meu Perfil Alterar email utilizando email inválido",
+              "timedOut": null,
+              "duration": 18796,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('testemedico{enter}');\ncy.get(':nth-child(2) > #profile').click();\ncy.get(':nth-child(4) > .form-element > .form-element__error-message').should('have.text', 'E-mail inválido');",
+              "err": {},
+              "uuid": "a6706930-4859-4357-b0ad-2d172a24fb35",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tentar alterar email ja existente",
+              "fullTitle": "Meu Perfil Tentar alterar email ja existente",
+              "timedOut": null,
+              "duration": 24586,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('testemedico@grr.la{enter}');\ncy.wait(2000);\ncy.get('.c-my-profile__save-container--btn').click(); // Falta validacão, pois não temos um feedback ao salvar a alteração.\ncy.get('.header__profile').click();\ncy.get('.menu-drawer__signout > span').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:204:8)",
+                "diff": null
+              },
+              "uuid": "3605d878-2b2c-4f58-b1d0-460991fa36a2",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adicionar Interesse e Especialidade para usuário perfil de médico",
+              "fullTitle": "Meu Perfil Adicionar Interesse e Especialidade para usuário perfil de médico",
+              "timedOut": null,
+              "duration": 24707,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click();\ncy.get('#expertiseprimary').select('Endoscopia');\ncy.get('#expertisesecondary').select('Geriatria');\ncy.get(':nth-child(9) > .c-select-list__option').click();\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');\ncy.wait(2000);\ncy.get(':nth-child(9) > .c-select-list__option').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:218:8)",
+                "diff": null
+              },
+              "uuid": "b6425156-a334-4833-a97b-4adec78c0d80",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alterar especialidades para usuário perfil de médico",
+              "fullTitle": "Meu Perfil Alterar especialidades para usuário perfil de médico",
+              "timedOut": null,
+              "duration": 25885,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click();\ncy.get('#expertiseprimary').select('Angiologia');\ncy.get('#expertisesecondary').select('Cirurgia geral');\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');\ncy.get('#expertiseprimary').select('Cardiologia');\ncy.get('#expertisesecondary').select('Neurologia');\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-my-profile__save-container--btn`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:232:8)",
+                "diff": null
+              },
+              "uuid": "612a2053-c590-4025-be61-20d70b36e355",
+              "parentUUID": "aea345f2-8a04-4292-9887-18df7b6f23ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11af6c72-3be6-40f6-a15b-a8df9668cb85",
+            "279f7d88-e6fa-4302-aee4-5b79a00c097b",
+            "d5992696-3304-423c-8fe2-5dfc14179782",
+            "a6706930-4859-4357-b0ad-2d172a24fb35"
+          ],
+          "failures": [
+            "eb6174ab-73f0-40c1-bc84-a7ddd10f91ac",
+            "d3392c4b-e903-4099-a65a-4835f8318a32",
+            "b2399f8d-fe37-47ce-a9b5-f9e0494e5833",
+            "3605d878-2b2c-4f58-b1d0-460991fa36a2",
+            "b6425156-a334-4833-a97b-4adec78c0d80",
+            "612a2053-c590-4025-be61-20d70b36e355"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 229273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
