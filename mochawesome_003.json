@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 4,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 4,
-    "start": "2022-07-01T08:22:06.027Z",
-    "end": "2022-07-01T08:23:01.891Z",
-    "duration": 55864,
+    "failures": 3,
+    "start": "2022-07-02T08:19:37.528Z",
+    "end": "2022-07-02T08:20:46.164Z",
+    "duration": 68636,
     "testsRegistered": 4,
-    "passPercent": 0,
+    "passPercent": 25,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8e34228c-4ccb-44d4-a998-a37d908ec7ee",
+      "uuid": "56b76e71-f58d-4c85-9b52-29ab87ac4c1b",
       "title": "",
       "fullFile": "cypress/integration/calendario.spec.js",
       "file": "cypress/integration/calendario.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ac113573-8cfc-447a-90c3-bf8d8e2db6ae",
+          "uuid": "a503aa1a-058e-4f03-9422-fee83ca33e85",
           "title": "Calendario",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Acessar evento com data passada, como medico",
               "fullTitle": "Calendario Acessar evento com data passada, como medico",
               "timedOut": null,
-              "duration": 19687,
+              "duration": 25332,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('HipoTalks').click();\ncy.get('.c-text--h1').should('contain', 'HipoTalks');",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:284:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:129:20)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HipoTalks' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HipoTalks' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:132:8)",
                 "diff": null
               },
-              "uuid": "d13deb7f-7de9-4eb7-9968-78a965b55aae",
-              "parentUUID": "ac113573-8cfc-447a-90c3-bf8d8e2db6ae",
+              "uuid": "b028013a-b4f7-48b7-953e-82c8b8fb2350",
+              "parentUUID": "a503aa1a-058e-4f03-9422-fee83ca33e85",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "Acessar evento com data futura, como medico",
               "fullTitle": "Calendario Acessar evento com data futura, como medico",
               "timedOut": null,
-              "duration": 11775,
+              "duration": 15371,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('Evento Zinpass Eze 2021 - Automação Data Futura').click();\ncy.get('.c-text--h1').should('contain', 'Evento Automação Data Futura');",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:284:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:136:20)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Evento Zinpass Eze 2021 - Automação Data Futura' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Evento Zinpass Eze 2021 - Automação Data Futura' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:139:8)",
                 "diff": null
               },
-              "uuid": "d192b667-c413-4a3f-bd9f-776a5b459e95",
-              "parentUUID": "ac113573-8cfc-447a-90c3-bf8d8e2db6ae",
+              "uuid": "900b7a68-7aa6-4250-8b69-911625c78147",
+              "parentUUID": "a503aa1a-058e-4f03-9422-fee83ca33e85",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "Adicionar evento ao calendário, como medico",
               "fullTitle": "Calendario Adicionar evento ao calendário, como medico",
               "timedOut": null,
-              "duration": 12184,
+              "duration": 16465,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,12 +91,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.get('#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule').click();\ncy.get('.c-dropdown > ul > :nth-child(2)').click(); // Falta validação, na outra aba.",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:284:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:143:20)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:146:8)",
                 "diff": null
               },
-              "uuid": "af62a2d9-6d9a-4d32-9f56-a7222db41770",
-              "parentUUID": "ac113573-8cfc-447a-90c3-bf8d8e2db6ae",
+              "uuid": "c14303aa-df87-4284-83d7-43657d6ffbba",
+              "parentUUID": "a503aa1a-058e-4f03-9422-fee83ca33e85",
               "isHook": false,
               "skipped": false
             },
@@ -104,36 +104,33 @@
               "title": "Acessar evento ao vivo, como medico",
               "fullTitle": "Calendario Acessar evento ao vivo, como medico",
               "timedOut": null,
-              "duration": 12085,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 11273,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click(); // Falta criar evento ao vivo",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header__login > :nth-child(1)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:284:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:150:20)",
-                "diff": null
-              },
-              "uuid": "07ce1f8a-7985-4473-b987-584a84a0dbfd",
-              "parentUUID": "ac113573-8cfc-447a-90c3-bf8d8e2db6ae",
+              "err": {},
+              "uuid": "9ecbc46f-6e49-43e5-bfd3-b6bdb05b506f",
+              "parentUUID": "a503aa1a-058e-4f03-9422-fee83ca33e85",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "9ecbc46f-6e49-43e5-bfd3-b6bdb05b506f"
+          ],
           "failures": [
-            "d13deb7f-7de9-4eb7-9968-78a965b55aae",
-            "d192b667-c413-4a3f-bd9f-776a5b459e95",
-            "af62a2d9-6d9a-4d32-9f56-a7222db41770",
-            "07ce1f8a-7985-4473-b987-584a84a0dbfd"
+            "b028013a-b4f7-48b7-953e-82c8b8fb2350",
+            "900b7a68-7aa6-4250-8b69-911625c78147",
+            "c14303aa-df87-4284-83d7-43657d6ffbba"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 55731,
+          "duration": 68441,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
