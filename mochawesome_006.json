@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 4,
-    "start": "2022-07-11T08:42:41.770Z",
-    "end": "2022-07-11T08:44:07.740Z",
-    "duration": 85970,
+    "start": "2022-07-12T08:34:20.600Z",
+    "end": "2022-07-12T08:35:40.253Z",
+    "duration": 79653,
     "testsRegistered": 7,
     "passPercent": 42.857142857142854,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e734d7d1-ad2c-4a69-b900-a0ee4273a80f",
+      "uuid": "7479fc6b-1ab4-4bad-b753-a0b9ba0f5fdd",
       "title": "",
       "fullFile": "cypress/integration/recuperar-senha.js",
       "file": "cypress/integration/recuperar-senha.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+          "uuid": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
           "title": "Recuperar Senha",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Esqueci minha senha",
               "fullTitle": "Recuperar Senha Esqueci minha senha",
               "timedOut": null,
-              "duration": 20603,
+              "duration": 18571,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#uf').select('SC');\ncy.get('#lf-registro').type('11655');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Esqueci minha senha');",
               "err": {},
-              "uuid": "5ef07768-03ae-4349-a4af-ea7000084cb6",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "500fc24b-16ff-419b-aa8a-6d3afdb2eb20",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Tentar recuperar senha utilizando Número do registro invalido",
               "fullTitle": "Recuperar Senha Tentar recuperar senha utilizando Número do registro invalido",
               "timedOut": null,
-              "duration": 9802,
+              "duration": 7863,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#uf').select('SC');\ncy.get('#lf-registro').type('7777');\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('#generic-error').should('have.text', 'Registro não localizado');",
               "err": {},
-              "uuid": "40f82bba-1f13-4d84-9617-6b775d900d49",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "78a2b7e4-66be-4d0b-becf-7ea8fd7abfa7",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Reenviar email de recuperação de senha",
               "fullTitle": "Recuperar Senha Reenviar email de recuperação de senha",
               "timedOut": null,
-              "duration": 11173,
+              "duration": 11174,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,8 +87,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-base-modal-content__body > :nth-child(1) > .c-text--h2`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:159:73)",
                 "diff": null
               },
-              "uuid": "9091de5e-920c-4cdc-b69e-1c9a07b54da4",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "df2cf3b6-3909-49c2-b3f5-9dc58c385cc4",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -96,7 +96,7 @@
               "title": "Alterar email de recuperação de senha",
               "fullTitle": "Recuperar Senha Alterar email de recuperação de senha",
               "timedOut": null,
-              "duration": 12130,
+              "duration": 11439,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -109,8 +109,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-base-modal-content__body > :nth-child(1) > .c-text--h2`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:173:73)",
                 "diff": null
               },
-              "uuid": "a66e63c6-9832-476f-80db-4f588227576f",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "eb32b33a-40ee-4616-9a38-fbe1256c85b3",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -118,7 +118,7 @@
               "title": "Tentar alterar email de recuperacao de senha utilizando Email invalido",
               "fullTitle": "Recuperar Senha Tentar alterar email de recuperacao de senha utilizando Email invalido",
               "timedOut": null,
-              "duration": 12204,
+              "duration": 11447,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -131,8 +131,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-base-modal-content__body > :nth-child(1) > .c-text--h2`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:195:73)",
                 "diff": null
               },
-              "uuid": "15e5d15f-21e8-42ec-9771-8974213ec1ff",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "11f23ddf-7d70-48ce-93e0-92602535dd57",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -140,7 +140,7 @@
               "title": "Tentar alterar email de recuperacao de senha utilizando Email ja existente",
               "fullTitle": "Recuperar Senha Tentar alterar email de recuperacao de senha utilizando Email ja existente",
               "timedOut": null,
-              "duration": 12323,
+              "duration": 11450,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -153,8 +153,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-base-modal-content__body > :nth-child(1) > .c-text--h2`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/recuperar-senha.js:215:73)",
                 "diff": null
               },
-              "uuid": "21fbde29-ef1f-4db2-bb07-25094d953cdf",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "5feed2d5-4ccd-4a04-8e46-51dcb1adf351",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             },
@@ -162,7 +162,7 @@
               "title": "Verificar obrigatoriedade dos campos UF e Registro ao Recuperar senha",
               "fullTitle": "Recuperar Senha Verificar obrigatoriedade dos campos UF e Registro ao Recuperar senha",
               "timedOut": null,
-              "duration": 7404,
+              "duration": 7454,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -171,27 +171,27 @@
               "context": null,
               "code": "cy.get('.header__login > :nth-child(1)').click();\ncy.get('.menu-drawer__signin').click();\ncy.get('#forgot-pass').click();\ncy.get('#sf-email-different').click({\n  force: true\n});\ncy.get('#uf-error').should('have.text', 'Escolher Estado');\ncy.get('#registro-error').should('have.text', 'Favor informar seu número de registro');",
               "err": {},
-              "uuid": "4cafff75-47df-40c4-93aa-893dbb7f5f2a",
-              "parentUUID": "bb7bf8cc-b7f5-4110-9ac6-11e9fbc86cab",
+              "uuid": "22eb1a18-ba15-487b-880a-d26ee199572a",
+              "parentUUID": "38490665-8f28-471a-8fa6-bd7fe7c03bb3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5ef07768-03ae-4349-a4af-ea7000084cb6",
-            "40f82bba-1f13-4d84-9617-6b775d900d49",
-            "4cafff75-47df-40c4-93aa-893dbb7f5f2a"
+            "500fc24b-16ff-419b-aa8a-6d3afdb2eb20",
+            "78a2b7e4-66be-4d0b-becf-7ea8fd7abfa7",
+            "22eb1a18-ba15-487b-880a-d26ee199572a"
           ],
           "failures": [
-            "9091de5e-920c-4cdc-b69e-1c9a07b54da4",
-            "a66e63c6-9832-476f-80db-4f588227576f",
-            "15e5d15f-21e8-42ec-9771-8974213ec1ff",
-            "21fbde29-ef1f-4db2-bb07-25094d953cdf"
+            "df2cf3b6-3909-49c2-b3f5-9dc58c385cc4",
+            "eb32b33a-40ee-4616-9a38-fbe1256c85b3",
+            "11f23ddf-7d70-48ce-93e0-92602535dd57",
+            "5feed2d5-4ccd-4a04-8e46-51dcb1adf351"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 85639,
+          "duration": 79398,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
