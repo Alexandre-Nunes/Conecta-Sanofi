@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 4,
-    "passes": 3,
+    "tests": 3,
+    "passes": 2,
     "pending": 0,
     "failures": 1,
-    "start": "2022-09-06T08:27:26.668Z",
-    "end": "2022-09-06T08:28:30.440Z",
-    "duration": 63772,
+    "start": "2022-09-07T08:27:09.860Z",
+    "end": "2022-09-07T08:27:51.169Z",
+    "duration": 41309,
     "testsRegistered": 12,
-    "passPercent": 25,
+    "passPercent": 16.666666666666664,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 8,
+    "skipped": 9,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "807d7aa1-65bd-49c4-81f9-4501cf40c47b",
+      "uuid": "6a08c688-533e-4fd6-9e41-f0718135b909",
       "title": "",
       "fullFile": "cypress/integration/login.spec.js",
       "file": "cypress/integration/login.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9cc49b25-ec56-4811-835d-b1cfe8e02c12",
+          "uuid": "bb862482-9c6f-45f1-96da-8c496dedbb34",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+              "uuid": "8ab65f7d-9496-455c-8777-58960140ac9b",
               "title": "Login com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Realizar login de Médico com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Médico com número de registro",
                   "timedOut": null,
-                  "duration": 30186,
+                  "duration": 23423,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "_login.default.loginMedicoComRegistro();",
                   "err": {},
-                  "uuid": "5c474de8-2042-46fe-a783-e149f5cc0bed",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "4be7ed61-fc71-46c7-8a2e-a86e3e45e85d",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,7 +65,7 @@
                   "title": "Realizar login de Farmacêutico com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Farmacêutico com número de registro",
                   "timedOut": null,
-                  "duration": 13492,
+                  "duration": 11009,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -74,8 +74,8 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceuticoComRegistro();",
                   "err": {},
-                  "uuid": "ff061aa7-ce0a-4e6b-8c1d-712af82f3ac8",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "e085b4a3-950e-4eab-af89-ff5dc7ba7ad2",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": false
                 },
@@ -83,17 +83,21 @@
                   "title": "Realizar login de Enfermeiro com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Enfermeiro com número de registro",
                   "timedOut": null,
-                  "duration": 12220,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 6584,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginEnfermeiroComRegistro();",
-                  "err": {},
-                  "uuid": "a9dec3e4-c58e-4da6-b54a-179c020729c6",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:219:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:126:27)",
+                    "diff": null
+                  },
+                  "uuid": "c3751de9-bf75-4fd1-b9a4-c93d141f6669",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": false
                 },
@@ -101,23 +105,19 @@
                   "title": "Realizar login de Nutricionista com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Nutricionista com número de registro",
                   "timedOut": null,
-                  "duration": 7620,
-                  "state": "failed",
+                  "duration": 0,
+                  "state": "skipped",
                   "speed": null,
                   "pass": false,
-                  "fail": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginNutricionistaComRegistro();",
-                  "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:219:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:126:27)",
-                    "diff": null
-                  },
-                  "uuid": "8c6d5b8e-1259-4329-97e1-0353d0fb09a1",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "err": {},
+                  "uuid": "7f4bc2c2-2e71-4165-b619-82e97b7aa805",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 },
                 {
                   "title": "Realizar login de Fisioterapeuta com número de registro",
@@ -132,8 +132,8 @@
                   "context": null,
                   "code": "_login.default.loginFisioterapeutaComRegistro();",
                   "err": {},
-                  "uuid": "8c1a8778-5757-402c-a918-a4c9a3ec5922",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "c183ef3e-4df0-465f-8953-2331d45d948d",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -150,8 +150,8 @@
                   "context": null,
                   "code": "_login.default.loginMedicoComEmail();",
                   "err": {},
-                  "uuid": "acfd56ef-939f-47f0-bc29-c802fbb7aa5b",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "1376aed8-93e8-4281-9b2e-97770da26bfe",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -168,8 +168,8 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceuticoComEmail();",
                   "err": {},
-                  "uuid": "2299514c-f772-4426-94cb-893046a0ddc5",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "21dc885e-57f0-4ede-a12c-861e01ac7e7f",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -186,8 +186,8 @@
                   "context": null,
                   "code": "_login.default.loginEnfermeiroComEmail();",
                   "err": {},
-                  "uuid": "e26e9075-d1dd-4dc4-b50a-a58ccab1d628",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "1e474a0c-157c-4feb-b94b-4259c3b45beb",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -204,8 +204,8 @@
                   "context": null,
                   "code": "_login.default.loginNutricionistaComEmail();",
                   "err": {},
-                  "uuid": "6da0d44f-4816-4ba7-8c3f-8b1ba5bfdb95",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "6ffa826e-b5fc-49e5-8c77-4136890e5b55",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 },
@@ -222,37 +222,37 @@
                   "context": null,
                   "code": "_login.default.loginFisioterapeutaComEmail();",
                   "err": {},
-                  "uuid": "ee483f9f-806e-4c20-af31-e1226474b08a",
-                  "parentUUID": "5d0ad146-401b-43ef-acd6-ceb094f6160a",
+                  "uuid": "ec508976-2385-4866-88a2-bb47e62f287a",
+                  "parentUUID": "8ab65f7d-9496-455c-8777-58960140ac9b",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "5c474de8-2042-46fe-a783-e149f5cc0bed",
-                "ff061aa7-ce0a-4e6b-8c1d-712af82f3ac8",
-                "a9dec3e4-c58e-4da6-b54a-179c020729c6"
+                "4be7ed61-fc71-46c7-8a2e-a86e3e45e85d",
+                "e085b4a3-950e-4eab-af89-ff5dc7ba7ad2"
               ],
               "failures": [
-                "8c6d5b8e-1259-4329-97e1-0353d0fb09a1"
+                "c3751de9-bf75-4fd1-b9a4-c93d141f6669"
               ],
               "pending": [],
               "skipped": [
-                "8c1a8778-5757-402c-a918-a4c9a3ec5922",
-                "acfd56ef-939f-47f0-bc29-c802fbb7aa5b",
-                "2299514c-f772-4426-94cb-893046a0ddc5",
-                "e26e9075-d1dd-4dc4-b50a-a58ccab1d628",
-                "6da0d44f-4816-4ba7-8c3f-8b1ba5bfdb95",
-                "ee483f9f-806e-4c20-af31-e1226474b08a"
+                "7f4bc2c2-2e71-4165-b619-82e97b7aa805",
+                "c183ef3e-4df0-465f-8953-2331d45d948d",
+                "1376aed8-93e8-4281-9b2e-97770da26bfe",
+                "21dc885e-57f0-4ede-a12c-861e01ac7e7f",
+                "1e474a0c-157c-4feb-b94b-4259c3b45beb",
+                "6ffa826e-b5fc-49e5-8c77-4136890e5b55",
+                "ec508976-2385-4866-88a2-bb47e62f287a"
               ],
-              "duration": 63518,
+              "duration": 41016,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "5a583271-ecb2-4477-8d3f-be0fdbe698d4",
+              "uuid": "5e6104e8-f7d4-4398-b1a9-026bfb7dde82",
               "title": "Login sem sucesso",
               "fullFile": "",
               "file": "",
@@ -272,7 +272,7 @@
                   "context": null,
                   "code": "_login.default.loginSemDadosObrigatorios();",
                   "err": {},
-                  "uuid": "b0598c06-75dc-4d94-9755-7b19ba8ac933",
+                  "uuid": "500a3e80-d663-4c6a-b097-7f9d8c4954a4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -290,7 +290,7 @@
                   "context": null,
                   "code": "_login.default.loginComDadosInvalidos();",
                   "err": {},
-                  "uuid": "d6c826fb-a62b-4b0e-880c-94cea4f245b6",
+                  "uuid": "018b9577-46e2-4f4e-9ee0-4ecce7399ad3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -301,8 +301,8 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "b0598c06-75dc-4d94-9755-7b19ba8ac933",
-                "d6c826fb-a62b-4b0e-880c-94cea4f245b6"
+                "500a3e80-d663-4c6a-b097-7f9d8c4954a4",
+                "018b9577-46e2-4f4e-9ee0-4ecce7399ad3"
               ],
               "duration": 0,
               "root": false,
