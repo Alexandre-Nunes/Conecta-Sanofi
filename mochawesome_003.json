@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 4,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 3,
-    "start": "2022-11-09T08:25:46.823Z",
-    "end": "2022-11-09T08:27:13.994Z",
-    "duration": 87171,
+    "failures": 4,
+    "start": "2022-11-10T08:26:49.504Z",
+    "end": "2022-11-10T08:28:19.278Z",
+    "duration": 89774,
     "testsRegistered": 4,
-    "passPercent": 25,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4b444cce-1cc6-42e9-9211-4a7ba490f00f",
+      "uuid": "49cf5927-eda7-4187-b704-c5f582a0315f",
       "title": "",
       "fullFile": "cypress/integration/calendario.spec.js",
       "file": "cypress/integration/calendario.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fb2a1804-38c5-4e68-a160-b867ef64299c",
+          "uuid": "987e65cf-d904-40de-9a61-77f94ed8d675",
           "title": "Calendario",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Acessar evento com data passada, como medico",
               "fullTitle": "Calendario Acessar evento com data passada, como medico",
               "timedOut": null,
-              "duration": 32671,
+              "duration": 33485,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('HipoTalks').click();\ncy.get('.c-text--h1').should('contain', 'HipoTalks');",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HipoTalks' but never did.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HipoTalks' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:132:8)",
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:131:55)",
                 "diff": null
               },
-              "uuid": "8d7de095-8516-4f58-a49b-0ab5fa5ec5ce",
-              "parentUUID": "fb2a1804-38c5-4e68-a160-b867ef64299c",
+              "uuid": "0158c75a-0b76-46d0-8be9-390abd59af4f",
+              "parentUUID": "987e65cf-d904-40de-9a61-77f94ed8d675",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "Acessar evento com data futura, como medico",
               "fullTitle": "Calendario Acessar evento com data futura, como medico",
               "timedOut": null,
-              "duration": 19575,
+              "duration": 18479,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('Evento Zinpass Eze 2021 - Automação Data Futura').click();\ncy.get('.c-text--h1').should('contain', 'Evento Automação Data Futura');",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Evento Zinpass Eze 2021 - Automação Data Futura' but never did.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Evento Zinpass Eze 2021 - Automação Data Futura' but never did.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:139:8)",
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:138:55)",
                 "diff": null
               },
-              "uuid": "28d74b03-0859-40b4-a405-79411a121085",
-              "parentUUID": "fb2a1804-38c5-4e68-a160-b867ef64299c",
+              "uuid": "f0e5b699-6c72-4236-9128-1c958981c129",
+              "parentUUID": "987e65cf-d904-40de-9a61-77f94ed8d675",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "Adicionar evento ao calendário, como medico",
               "fullTitle": "Calendario Adicionar evento ao calendário, como medico",
               "timedOut": null,
-              "duration": 18811,
+              "duration": 18014,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,12 +91,12 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.get('#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule').click();\ncy.get('.c-dropdown > ul > :nth-child(2)').click(); // Falta validação, na outra aba.",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule`, but never found it.\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:146:8)",
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:145:55)",
                 "diff": null
               },
-              "uuid": "49a23b19-97b2-4ddc-a9dc-d17c0c006830",
-              "parentUUID": "fb2a1804-38c5-4e68-a160-b867ef64299c",
+              "uuid": "7dc229f7-4f03-4f94-bf30-e71f9d640404",
+              "parentUUID": "987e65cf-d904-40de-9a61-77f94ed8d675",
               "isHook": false,
               "skipped": false
             },
@@ -104,33 +104,36 @@
               "title": "Acessar evento ao vivo, como medico",
               "fullTitle": "Calendario Acessar evento ao vivo, como medico",
               "timedOut": null,
-              "duration": 15860,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 19364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click(); // Falta criar evento ao vivo",
-              "err": {},
-              "uuid": "91feb488-803d-4e86-a5d5-2a21ab77450a",
-              "parentUUID": "fb2a1804-38c5-4e68-a160-b867ef64299c",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a href=\"/treinamentos/crm\" class=\"c-navbar__sublink__text\">...</a>`\n\nis being covered by another element:\n\n`<strong>Conta C...</strong>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:152:55)",
+                "diff": null
+              },
+              "uuid": "4fde9b40-a735-4707-9c0d-af578883d5f9",
+              "parentUUID": "987e65cf-d904-40de-9a61-77f94ed8d675",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "91feb488-803d-4e86-a5d5-2a21ab77450a"
-          ],
+          "passes": [],
           "failures": [
-            "8d7de095-8516-4f58-a49b-0ab5fa5ec5ce",
-            "28d74b03-0859-40b4-a405-79411a121085",
-            "49a23b19-97b2-4ddc-a9dc-d17c0c006830"
+            "0158c75a-0b76-46d0-8be9-390abd59af4f",
+            "f0e5b699-6c72-4236-9128-1c958981c129",
+            "7dc229f7-4f03-4f94-bf30-e71f9d640404",
+            "4fde9b40-a735-4707-9c0d-af578883d5f9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 86917,
+          "duration": 89342,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
