@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 1,
     "failures": 2,
-    "start": "2022-11-22T08:18:00.758Z",
-    "end": "2022-11-22T08:19:48.068Z",
-    "duration": 107310,
+    "start": "2022-11-23T08:16:04.367Z",
+    "end": "2022-11-23T08:18:46.546Z",
+    "duration": 162179,
     "testsRegistered": 7,
     "passPercent": 50,
     "pendingPercent": 14.285714285714285,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1b7780bd-d43f-40ec-9749-3ca105c8a8ec",
+      "uuid": "9101f53d-1a2a-4f0c-983c-ec442a116c15",
       "title": "",
       "fullFile": "cypress/integration/artigo.spec.js",
       "file": "cypress/integration/artigo.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "831e4317-f9d2-434c-b8bb-47dc86320bdf",
+          "uuid": "f57598a9-5f98-4340-a553-ee6592a05a20",
           "title": "Acessar Artigo com usuário deslogado",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e339e194-31ae-4abc-bbeb-814ccd6d0c02",
+              "uuid": "fe6a471b-e017-4fdb-9049-14b85f3b8ef6",
               "title": "Acessar artigo com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado",
                   "fullTitle": "Acessar Artigo com usuário deslogado Acessar artigo com sucesso Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado",
                   "timedOut": null,
-                  "duration": 29184,
+                  "duration": 30435,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-base-modal-content__paper').should('be.visible');\ncy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico');",
                   "err": {},
-                  "uuid": "f7171f2a-09cf-41ba-8d7e-9260dc31227c",
-                  "parentUUID": "e339e194-31ae-4abc-bbeb-814ccd6d0c02",
+                  "uuid": "274612ab-419c-49cb-9e6c-c747e076e7d9",
+                  "parentUUID": "fe6a471b-e017-4fdb-9049-14b85f3b8ef6",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,30 +65,35 @@
                   "title": "Acessar artigo",
                   "fullTitle": "Acessar Artigo com usuário deslogado Acessar artigo com sucesso Acessar artigo",
                   "timedOut": null,
-                  "duration": 15132,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 69579,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "_artigo.default.AcessarArtigo();",
-                  "err": {},
-                  "uuid": "f1bfb4bc-7c3c-4866-93f3-453e746d9e7b",
-                  "parentUUID": "e339e194-31ae-4abc-bbeb-814ccd6d0c02",
+                  "err": {
+                    "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                    "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:139540:13)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:139836:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5920:41\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at Artigo.AcessarArtigo (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:245:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:137:23)",
+                    "diff": null
+                  },
+                  "uuid": "df17b902-c5ec-467e-8753-348b276bc38d",
+                  "parentUUID": "fe6a471b-e017-4fdb-9049-14b85f3b8ef6",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "f7171f2a-09cf-41ba-8d7e-9260dc31227c",
-                "f1bfb4bc-7c3c-4866-93f3-453e746d9e7b"
+                "274612ab-419c-49cb-9e6c-c747e076e7d9"
               ],
-              "failures": [],
+              "failures": [
+                "df17b902-c5ec-467e-8753-348b276bc38d"
+              ],
               "pending": [],
               "skipped": [],
-              "duration": 44316,
+              "duration": 100014,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -104,7 +109,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "0874a928-0313-4a5b-84c0-db04dd36f280",
+          "uuid": "d1c1e35f-abeb-4ff3-b37d-237bb3a432f8",
           "title": "Acessar Artigo com usuário logado",
           "fullFile": "",
           "file": "",
@@ -113,7 +118,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "55961889-2f2c-489a-800c-d6fb3fd37935",
+              "uuid": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
               "title": "Acessar artigo com sucesso",
               "fullFile": "",
               "file": "",
@@ -124,7 +129,7 @@
                   "title": "Acessar artigo",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Acessar artigo",
                   "timedOut": null,
-                  "duration": 14099,
+                  "duration": 16105,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -137,8 +142,8 @@
                     "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:393:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:144:22)",
                     "diff": null
                   },
-                  "uuid": "bd7a2e39-5d6f-46c6-8d3f-270cd928f680",
-                  "parentUUID": "55961889-2f2c-489a-800c-d6fb3fd37935",
+                  "uuid": "e92077f0-8291-4553-8975-799df56da0af",
+                  "parentUUID": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -155,8 +160,8 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "dbac4d62-8fc3-4b05-a2fc-ef3d25c41a8d",
-                  "parentUUID": "55961889-2f2c-489a-800c-d6fb3fd37935",
+                  "uuid": "41b247c9-98e6-4cde-88f4-c009950b4f5b",
+                  "parentUUID": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -164,7 +169,7 @@
                   "title": "Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão",
                   "timedOut": null,
-                  "duration": 13416,
+                  "duration": 15980,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -177,8 +182,8 @@
                     "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.\n    at Login.loginFisioterapeutaComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:493:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:164:22)",
                     "diff": null
                   },
-                  "uuid": "aca83bd1-098f-4afb-a4a5-86e29e41a40a",
-                  "parentUUID": "55961889-2f2c-489a-800c-d6fb3fd37935",
+                  "uuid": "b04d09f3-2405-4ccc-9c0e-b7db68197c1d",
+                  "parentUUID": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -186,21 +191,17 @@
                   "title": "Tentar acessar artigo exclusivo, com Soft Login",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Tentar acessar artigo exclusivo, com Soft Login",
                   "timedOut": null,
-                  "duration": 15077,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 14353,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "//cy.get('.c-navbar__area-logged > .c-navbar__item').click()\ncy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico');\ncy.get('input[value=\"true\"]').check();\ncy.get('#sf-continue-validation').click();\ncy.get('#hcp-type').select('Farmacêutico (CRF)');\ncy.get('#uf').select('RS');\ncy.get('#sf-register-2').type('4444444');\ncy.get('#sf-email').type('farma104@teste.com');\ncy.get('#opt-in').check();\ncy.get('#sf-continue-validation').click();\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Criar conta');",
-                  "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: expected '<h2.c-text.c-text--h2>' to have text 'Criar conta', but the text was ' Confirme seus dados'",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h2.c-text.c-text--h2>' to have text 'Criar conta', but the text was ' Confirme seus dados'\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:182:75)",
-                    "diff": "- ' Confirme seus dados'\n+ 'Criar conta'\n"
-                  },
-                  "uuid": "9804313c-ceaf-49ee-b918-aa2e1a3d188f",
-                  "parentUUID": "55961889-2f2c-489a-800c-d6fb3fd37935",
+                  "err": {},
+                  "uuid": "793da95d-97e7-45fd-8540-07ad0f2a72f0",
+                  "parentUUID": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -208,7 +209,7 @@
                   "title": "Acessar artigo exclusivo para médico e farmacêutico, utilizando perfil de Farmacêutico",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Acessar artigo exclusivo para médico e farmacêutico, utilizando perfil de Farmacêutico",
                   "timedOut": null,
-                  "duration": 20108,
+                  "duration": 15365,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -217,26 +218,26 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceutico(); //cy.get('.c-navbar__area-logged > .c-navbar__item').click()\n\ncy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-hero-article__title').should('contain', 'Resultados do cemiplimabe');",
                   "err": {},
-                  "uuid": "2400ccdc-b85d-45f8-beb1-603fd0c58552",
-                  "parentUUID": "55961889-2f2c-489a-800c-d6fb3fd37935",
+                  "uuid": "27442726-b47d-4d68-96fc-472437967175",
+                  "parentUUID": "97c56b0e-249c-4455-aa95-b72b4f054e5a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "2400ccdc-b85d-45f8-beb1-603fd0c58552"
+                "793da95d-97e7-45fd-8540-07ad0f2a72f0",
+                "27442726-b47d-4d68-96fc-472437967175"
               ],
               "failures": [
-                "bd7a2e39-5d6f-46c6-8d3f-270cd928f680",
-                "aca83bd1-098f-4afb-a4a5-86e29e41a40a",
-                "9804313c-ceaf-49ee-b918-aa2e1a3d188f"
+                "e92077f0-8291-4553-8975-799df56da0af",
+                "b04d09f3-2405-4ccc-9c0e-b7db68197c1d"
               ],
               "pending": [
-                "dbac4d62-8fc3-4b05-a2fc-ef3d25c41a8d"
+                "41b247c9-98e6-4cde-88f4-c009950b4f5b"
               ],
               "skipped": [],
-              "duration": 62700,
+              "duration": 61803,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
