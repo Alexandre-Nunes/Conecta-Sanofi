@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 6,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 6,
-    "start": "2023-02-27T08:23:54.984Z",
-    "end": "2023-02-27T08:25:32.526Z",
-    "duration": 97542,
+    "failures": 2,
+    "start": "2023-02-28T08:22:02.737Z",
+    "end": "2023-02-28T08:22:32.449Z",
+    "duration": 29712,
     "testsRegistered": 12,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 6,
+    "skipped": 10,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "3fe1af9f-584d-4471-bbbc-cbe643a6c817",
+      "uuid": "95b311d2-e44c-4029-8a08-95def29ec392",
       "title": "",
       "fullFile": "cypress/integration/login.spec.js",
       "file": "cypress/integration/login.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4ce4ca2f-235e-4274-ab3b-0244fa9894aa",
+          "uuid": "9115df35-b9cb-4c74-b607-edf730759272",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+              "uuid": "2c40679b-407b-4922-ba75-9ad26e73e089",
               "title": "Login com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Realizar login de Médico com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Médico com número de registro",
                   "timedOut": null,
-                  "duration": 25827,
+                  "duration": 24035,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -60,8 +60,8 @@
                     "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"D\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Login.loginMedicoComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:338:32)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:130:22)",
                     "diff": null
                   },
-                  "uuid": "db670577-d17f-4309-8425-e02fd80d3c6c",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "e9c274ce-6ea7-4590-8384-5cd6d914c15b",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": false
                 },
@@ -69,7 +69,7 @@
                   "title": "Realizar login de Farmacêutico com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Farmacêutico com número de registro",
                   "timedOut": null,
-                  "duration": 14775,
+                  "duration": 5580,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -78,12 +78,12 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceuticoComRegistro();",
                   "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"F\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"F\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Login.loginFarmaceuticoComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:356:32)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:133:22)",
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#onetrust-accept-btn-handler`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#onetrust-accept-btn-handler`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:218:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:126:27)",
                     "diff": null
                   },
-                  "uuid": "b6b56f22-fad0-4a5a-a374-b4f322263f32",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "4423715e-8700-4fa6-b435-c231972bf59e",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": false
                 },
@@ -91,89 +91,73 @@
                   "title": "Realizar login de Enfermeiro com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Enfermeiro com número de registro",
                   "timedOut": null,
-                  "duration": 14867,
-                  "state": "failed",
+                  "duration": 0,
+                  "state": "skipped",
                   "speed": null,
                   "pass": false,
-                  "fail": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginEnfermeiroComRegistro();",
-                  "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"E\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"E\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Login.loginEnfermeiroComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:374:32)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:136:22)",
-                    "diff": null
-                  },
-                  "uuid": "aac1356c-92a9-4c4c-9703-0619846dd35f",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "err": {},
+                  "uuid": "c528cd06-b23c-4a74-a372-737d4033134a",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 },
                 {
                   "title": "Realizar login de Nutricionista com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Nutricionista com número de registro",
                   "timedOut": null,
-                  "duration": 16424,
-                  "state": "failed",
+                  "duration": 0,
+                  "state": "skipped",
                   "speed": null,
                   "pass": false,
-                  "fail": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginNutricionistaComRegistro();",
-                  "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"N\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"N\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Login.loginNutricionistaComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:392:32)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:139:22)",
-                    "diff": null
-                  },
-                  "uuid": "5373c098-ba25-43cf-9feb-54d940d32ffb",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "err": {},
+                  "uuid": "3249af91-4c7f-4bce-ad74-0d74784cff0e",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 },
                 {
                   "title": "Realizar login de Fisioterapeuta com número de registro",
                   "fullTitle": "Login Login com sucesso Realizar login de Fisioterapeuta com número de registro",
                   "timedOut": null,
-                  "duration": 17013,
-                  "state": "failed",
+                  "duration": 0,
+                  "state": "skipped",
                   "speed": null,
                   "pass": false,
-                  "fail": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginFisioterapeutaComRegistro();",
-                  "err": {
-                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"F\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button class=\"header__profile header__profile--icon\" data-content=\"F\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"c-base-modal-content c-base-modal-content__shadow\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:144188:26)\n    at ensureDescendents (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132368:8)\n    at ensureDescendentsAndScroll (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132375:14)\n    at ensureElIsNotCovered (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132509:5)\n    at runAllChecks (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132696:52)\n    at retryActionability (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:132719:16)\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148863:21)\n    at whenStable (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148901:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:148393:16\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8915:18)\nFrom Your Spec Code:\n    at Login.loginFisioterapeutaComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:410:32)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:142:22)",
-                    "diff": null
-                  },
-                  "uuid": "57367337-c79c-4452-beb8-7d167e8a3231",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "err": {},
+                  "uuid": "b5c6864c-8b6c-49ee-b92c-96b752ae1467",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 },
                 {
                   "title": "Realizar login de Médico com email",
                   "fullTitle": "Login Login com sucesso Realizar login de Médico com email",
                   "timedOut": null,
-                  "duration": 8405,
-                  "state": "failed",
+                  "duration": 0,
+                  "state": "skipped",
                   "speed": null,
                   "pass": false,
-                  "fail": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "_login.default.loginMedicoComEmail();",
-                  "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#onetrust-accept-btn-handler`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#onetrust-accept-btn-handler`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:218:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/login.spec.js:126:27)",
-                    "diff": null
-                  },
-                  "uuid": "b17c9bf0-7bdb-49c7-b0e9-5ad6cd8e320c",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "err": {},
+                  "uuid": "93766510-878e-42fc-a9ff-740cdc48bd97",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 },
                 {
                   "title": "Realizar login de Farmacêutico com email",
@@ -188,8 +172,8 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceuticoComEmail();",
                   "err": {},
-                  "uuid": "c0b1d541-d4b0-4005-bce9-bbf3713cb7df",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "f6013b76-2290-4e5c-bbcf-67873d98d30e",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": true
                 },
@@ -206,8 +190,8 @@
                   "context": null,
                   "code": "_login.default.loginEnfermeiroComEmail();",
                   "err": {},
-                  "uuid": "ab9c6fe6-bd28-40cd-b43c-abb3cc6c8a96",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "ed689560-671f-4158-b86d-09cdf9df0076",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": true
                 },
@@ -224,8 +208,8 @@
                   "context": null,
                   "code": "_login.default.loginNutricionistaComEmail();",
                   "err": {},
-                  "uuid": "1e2a6181-18e7-4feb-91e8-e687ab77e0be",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "b3bc495b-c16c-4bc0-81d6-7e2d8edd4528",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": true
                 },
@@ -242,8 +226,8 @@
                   "context": null,
                   "code": "_login.default.loginFisioterapeutaComEmail();",
                   "err": {},
-                  "uuid": "f09adb61-986e-42ee-a2d7-786c708621bc",
-                  "parentUUID": "670a9150-2cf4-4c5a-a825-140586b53ee7",
+                  "uuid": "297de45c-60dc-47c6-8811-2b8c90934f7e",
+                  "parentUUID": "2c40679b-407b-4922-ba75-9ad26e73e089",
                   "isHook": false,
                   "skipped": true
                 }
@@ -251,27 +235,27 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "db670577-d17f-4309-8425-e02fd80d3c6c",
-                "b6b56f22-fad0-4a5a-a374-b4f322263f32",
-                "aac1356c-92a9-4c4c-9703-0619846dd35f",
-                "5373c098-ba25-43cf-9feb-54d940d32ffb",
-                "57367337-c79c-4452-beb8-7d167e8a3231",
-                "b17c9bf0-7bdb-49c7-b0e9-5ad6cd8e320c"
+                "e9c274ce-6ea7-4590-8384-5cd6d914c15b",
+                "4423715e-8700-4fa6-b435-c231972bf59e"
               ],
               "pending": [],
               "skipped": [
-                "c0b1d541-d4b0-4005-bce9-bbf3713cb7df",
-                "ab9c6fe6-bd28-40cd-b43c-abb3cc6c8a96",
-                "1e2a6181-18e7-4feb-91e8-e687ab77e0be",
-                "f09adb61-986e-42ee-a2d7-786c708621bc"
+                "c528cd06-b23c-4a74-a372-737d4033134a",
+                "3249af91-4c7f-4bce-ad74-0d74784cff0e",
+                "b5c6864c-8b6c-49ee-b92c-96b752ae1467",
+                "93766510-878e-42fc-a9ff-740cdc48bd97",
+                "f6013b76-2290-4e5c-bbcf-67873d98d30e",
+                "ed689560-671f-4158-b86d-09cdf9df0076",
+                "b3bc495b-c16c-4bc0-81d6-7e2d8edd4528",
+                "297de45c-60dc-47c6-8811-2b8c90934f7e"
               ],
-              "duration": 97311,
+              "duration": 29615,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "40ab2cb5-7db6-46d6-9812-b65af7a92ae8",
+              "uuid": "e6de05fd-d73b-4f16-b7de-4313b402e035",
               "title": "Login sem sucesso",
               "fullFile": "",
               "file": "",
@@ -291,7 +275,7 @@
                   "context": null,
                   "code": "_login.default.loginSemDadosObrigatorios();",
                   "err": {},
-                  "uuid": "04709b58-9cff-42f9-8119-9e1c496f1ce3",
+                  "uuid": "8b445547-7527-40bc-8997-77ef376e061a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -309,7 +293,7 @@
                   "context": null,
                   "code": "_login.default.loginComDadosInvalidos();",
                   "err": {},
-                  "uuid": "b9eb8ea2-bb27-4a2a-a9c3-c0b37ad4a33c",
+                  "uuid": "07764845-ac0d-48d6-bc49-ecca53042ee5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -320,8 +304,8 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "04709b58-9cff-42f9-8119-9e1c496f1ce3",
-                "b9eb8ea2-bb27-4a2a-a9c3-c0b37ad4a33c"
+                "8b445547-7527-40bc-8997-77ef376e061a",
+                "07764845-ac0d-48d6-bc49-ecca53042ee5"
               ],
               "duration": 0,
               "root": false,
