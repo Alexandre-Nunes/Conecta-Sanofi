@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 6,
-    "passes": 4,
+    "tests": 4,
+    "passes": 2,
     "pending": 0,
     "failures": 2,
-    "start": "2023-03-07T08:19:42.515Z",
-    "end": "2023-03-07T08:20:51.793Z",
-    "duration": 69278,
+    "start": "2023-03-08T08:18:45.483Z",
+    "end": "2023-03-08T08:19:32.686Z",
+    "duration": 47203,
     "testsRegistered": 6,
-    "passPercent": 66.66666666666666,
+    "passPercent": 33.33333333333333,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 2,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "e3a1b9c7-3a66-4cff-b833-390d3d335de5",
+      "uuid": "24fa4b0d-0210-47b1-a1dc-1a6c64af8cff",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "65f59982-ee2f-4555-804f-515745cba37d",
+          "uuid": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Tentar realizar cadastro de Médico com registro invalido",
               "fullTitle": "Cadastro Tentar realizar cadastro de Médico com registro invalido",
               "timedOut": null,
-              "duration": 22430,
+              "duration": 18237,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "_cadastro.default.cadastroMedicoComRegistroInvalido();",
               "err": {},
-              "uuid": "776a4ce0-bb6e-40ca-9fee-19515a31f83a",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "d5079168-c517-4a70-9cce-06dae439ec74",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Tentar realizar cadastro de Médico sem aceitar os termos",
               "fullTitle": "Cadastro Tentar realizar cadastro de Médico sem aceitar os termos",
               "timedOut": null,
-              "duration": 6319,
+              "duration": 6316,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_cadastro.default.cadastroMedicoSemAceitarTermos();",
               "err": {},
-              "uuid": "933f1460-729f-47f5-828a-fd95ac6cf650",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "53324751-7249-4376-95e6-34b2d58b5321",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Tentar realizar cadastro de Médico com registro já cadastrado",
               "fullTitle": "Cadastro Tentar realizar cadastro de Médico com registro já cadastrado",
               "timedOut": null,
-              "duration": 10353,
+              "duration": 16863,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,8 +87,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--h3 > strong`, but never found it.\n    at Cadastro.cadastroMedicoComRegistroJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2399:37)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2241:23)",
                 "diff": null
               },
-              "uuid": "dcc84952-5074-45e3-b281-d0d02a39c24b",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "0192c9a4-1f60-4114-9802-b00d68134103",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
               "skipped": false
             },
@@ -96,7 +96,7 @@
               "title": "Tentar realizar cadastro de Médico com email já cadastrado",
               "fullTitle": "Cadastro Tentar realizar cadastro de Médico com email já cadastrado",
               "timedOut": null,
-              "duration": 10797,
+              "duration": 5674,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -105,12 +105,12 @@
               "context": null,
               "code": "_cadastro.default.cadastroMedicoComEmailJaCadastrado();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--h3 > strong`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--h3 > strong`, but never found it.\n    at Cadastro.cadastroMedicoComEmailJaCadastrado (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2413:34)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2244:23)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2485:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/cadastro.spec.js:2231:25)",
                 "diff": null
               },
-              "uuid": "937615a9-ff6a-4644-a0c7-ba002a796f1c",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "10db94e5-1caa-448c-a7a7-404e64ba83e8",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
               "skipped": false
             },
@@ -118,53 +118,54 @@
               "title": "Tentar realizar cadastro de Médico sem informar os dados obrigatórios",
               "fullTitle": "Cadastro Tentar realizar cadastro de Médico sem informar os dados obrigatórios",
               "timedOut": null,
-              "duration": 5964,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_cadastro.default.cadastroMedicoSemInformarDadosObrigatorios();",
               "err": {},
-              "uuid": "b3a86eb9-50e6-4e5a-9055-5b264143f375",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "af61dd5b-d30f-4f62-b711-c060b9908eca",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Realizar cadastro de Nutricionista com sucesso",
               "fullTitle": "Cadastro Realizar cadastro de Nutricionista com sucesso",
               "timedOut": null,
-              "duration": 13234,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_cadastro.default.cadastroNutricionista();",
               "err": {},
-              "uuid": "6f3f4252-9d0b-4966-8b78-fc7a722aef09",
-              "parentUUID": "65f59982-ee2f-4555-804f-515745cba37d",
+              "uuid": "34bc00d1-2b52-472d-ab68-aaf9350f515d",
+              "parentUUID": "230b0b3c-caf8-4bce-bf56-d0ce925208b1",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "776a4ce0-bb6e-40ca-9fee-19515a31f83a",
-            "933f1460-729f-47f5-828a-fd95ac6cf650",
-            "b3a86eb9-50e6-4e5a-9055-5b264143f375",
-            "6f3f4252-9d0b-4966-8b78-fc7a722aef09"
+            "d5079168-c517-4a70-9cce-06dae439ec74",
+            "53324751-7249-4376-95e6-34b2d58b5321"
           ],
           "failures": [
-            "dcc84952-5074-45e3-b281-d0d02a39c24b",
-            "937615a9-ff6a-4644-a0c7-ba002a796f1c"
+            "0192c9a4-1f60-4114-9802-b00d68134103",
+            "10db94e5-1caa-448c-a7a7-404e64ba83e8"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 69097,
+          "skipped": [
+            "af61dd5b-d30f-4f62-b711-c060b9908eca",
+            "34bc00d1-2b52-472d-ab68-aaf9350f515d"
+          ],
+          "duration": 47090,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
