@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 1,
     "failures": 1,
-    "start": "2023-11-07T08:13:43.817Z",
-    "end": "2023-11-07T08:15:06.202Z",
-    "duration": 82385,
+    "start": "2023-11-08T08:13:35.815Z",
+    "end": "2023-11-08T08:15:09.534Z",
+    "duration": 93719,
     "testsRegistered": 7,
     "passPercent": 66.66666666666666,
     "pendingPercent": 14.285714285714285,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f7176e74-d72f-4fe4-bfca-f89fae13d359",
+      "uuid": "1fd57519-b5c6-4552-b0bd-78d03b8618d0",
       "title": "",
       "fullFile": "cypress/integration/artigo.spec.js",
       "file": "cypress/integration/artigo.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4f411d2a-cc07-47b7-ade3-ef17b110a2c0",
+          "uuid": "ecbf634f-0d5a-4406-8535-72374ed86d70",
           "title": "Acessar Artigo com usuário deslogado",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "734f1c17-684c-4042-9460-edbfb31a68df",
+              "uuid": "370328cc-0cd8-448f-bf43-5f63f92f437d",
               "title": "Acessar artigo com sucesso",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado",
                   "fullTitle": "Acessar Artigo com usuário deslogado Acessar artigo com sucesso Tentar acessar artigo exclusivo para médico e farmacêutico, estando deslogado",
                   "timedOut": null,
-                  "duration": 22779,
+                  "duration": 29344,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-base-modal-content__paper').should('be.visible');\ncy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico');",
                   "err": {},
-                  "uuid": "a1fdfa2d-0864-43ae-adc0-38aaf33bc9f1",
-                  "parentUUID": "734f1c17-684c-4042-9460-edbfb31a68df",
+                  "uuid": "ce00bc85-c6c0-4654-aa48-ba47bbc9f81b",
+                  "parentUUID": "370328cc-0cd8-448f-bf43-5f63f92f437d",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,7 +65,7 @@
                   "title": "Acessar artigo",
                   "fullTitle": "Acessar Artigo com usuário deslogado Acessar artigo com sucesso Acessar artigo",
                   "timedOut": null,
-                  "duration": 11825,
+                  "duration": 12964,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -74,21 +74,21 @@
                   "context": null,
                   "code": "_artigo.default.AcessarArtigo();",
                   "err": {},
-                  "uuid": "4c8a0e3a-33fd-44fe-80e9-3d77ccddc4d1",
-                  "parentUUID": "734f1c17-684c-4042-9460-edbfb31a68df",
+                  "uuid": "9c104ff7-f858-44c8-85c7-16bddee90f24",
+                  "parentUUID": "370328cc-0cd8-448f-bf43-5f63f92f437d",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "a1fdfa2d-0864-43ae-adc0-38aaf33bc9f1",
-                "4c8a0e3a-33fd-44fe-80e9-3d77ccddc4d1"
+                "ce00bc85-c6c0-4654-aa48-ba47bbc9f81b",
+                "9c104ff7-f858-44c8-85c7-16bddee90f24"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 34604,
+              "duration": 42308,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -104,7 +104,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "13af1f74-9069-4526-bd0c-9d1bfd2a9ae9",
+          "uuid": "baf26122-edcc-4890-9fc7-7d0a95976633",
           "title": "Acessar Artigo com usuário logado",
           "fullFile": "",
           "file": "",
@@ -113,7 +113,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+              "uuid": "e608f71b-32fb-47ee-abc9-1969729e68b5",
               "title": "Acessar artigo com sucesso",
               "fullFile": "",
               "file": "",
@@ -124,7 +124,7 @@
                   "title": "Acessar artigo",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Acessar artigo",
                   "timedOut": null,
-                  "duration": 12848,
+                  "duration": 13136,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -137,8 +137,8 @@
                     "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.\n    at Login.loginMedico (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:393:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:144:22)",
                     "diff": null
                   },
-                  "uuid": "73bad3d8-6d8f-4a75-ba0a-4e17fee847a9",
-                  "parentUUID": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+                  "uuid": "eac5db1e-c818-4e47-8ce9-1aebf07698ee",
+                  "parentUUID": "e608f71b-32fb-47ee-abc9-1969729e68b5",
                   "isHook": false,
                   "skipped": false
                 },
@@ -155,8 +155,8 @@
                   "context": null,
                   "code": "",
                   "err": {},
-                  "uuid": "bdecd8dd-2bb7-4a89-bdc9-85029391f96b",
-                  "parentUUID": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+                  "uuid": "4f2cff0e-18d4-4a54-a905-6769f34f2e38",
+                  "parentUUID": "e608f71b-32fb-47ee-abc9-1969729e68b5",
                   "isHook": false,
                   "skipped": false
                 },
@@ -164,7 +164,7 @@
                   "title": "Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Tentar acessar artigo exclusivo para médico e farmacêutico, utilizando perfil sem permissão",
                   "timedOut": null,
-                  "duration": 13029,
+                  "duration": 13700,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -177,8 +177,8 @@
                     "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.c-text--bold > :nth-child(2)`, but never found it.\n    at Login.loginFisioterapeutaComRegistro (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:493:28)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/artigo.spec.js:164:22)",
                     "diff": null
                   },
-                  "uuid": "1507684b-8f31-42c4-9499-8be1dc770dca",
-                  "parentUUID": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+                  "uuid": "ef64e504-ff73-4ad9-8883-d19a26adfa5c",
+                  "parentUUID": "e608f71b-32fb-47ee-abc9-1969729e68b5",
                   "isHook": false,
                   "skipped": false
                 },
@@ -186,7 +186,7 @@
                   "title": "Tentar acessar artigo exclusivo, com Soft Login",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Tentar acessar artigo exclusivo, com Soft Login",
                   "timedOut": null,
-                  "duration": 9807,
+                  "duration": 11285,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -195,8 +195,8 @@
                   "context": null,
                   "code": "//cy.get('.c-navbar__area-logged > .c-navbar__item').click()\ncy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-base-modal-content__body > .c-text--h2').should('contain', 'Conteúdo exclusivo para Médico e  Farmacêutico');\ncy.get('input[value=\"true\"]').check();\ncy.get('#sf-continue-validation').click();\ncy.get('#hcp-type').select('Farmacêutico (CRF)');\ncy.get('#uf').select('RS');\ncy.get('#sf-register-2').type('4444444');\ncy.get('#sf-email').type('farma104@teste.com');\ncy.get('#opt-in').check();\ncy.get('#sf-continue-validation').click();\ncy.get('.c-base-modal-content__body > :nth-child(1) > .c-text--h2').should('have.text', 'Criar conta');",
                   "err": {},
-                  "uuid": "5bd8b949-046e-4b19-b55c-feacb39e77cb",
-                  "parentUUID": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+                  "uuid": "6efda591-724a-4a11-995d-e37f323b6188",
+                  "parentUUID": "e608f71b-32fb-47ee-abc9-1969729e68b5",
                   "isHook": false,
                   "skipped": false
                 },
@@ -204,7 +204,7 @@
                   "title": "Acessar artigo exclusivo para médico e farmacêutico, utilizando perfil de Farmacêutico",
                   "fullTitle": "Acessar Artigo com usuário logado Acessar artigo com sucesso Acessar artigo exclusivo para médico e farmacêutico, utilizando perfil de Farmacêutico",
                   "timedOut": null,
-                  "duration": 11931,
+                  "duration": 13033,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -213,26 +213,26 @@
                   "context": null,
                   "code": "_login.default.loginFarmaceutico(); //cy.get('.c-navbar__area-logged > .c-navbar__item').click()\n\ncy.visit('https://stg-cd.sanoficonecta.com.br/artigos/resultados-empower-lung1-localmente-avancada');\ncy.get('.c-hero-article__title').should('contain', 'Resultados do cemiplimabe');",
                   "err": {},
-                  "uuid": "c2b04cd9-1250-4dbf-89b5-15de69c238e9",
-                  "parentUUID": "ae62b96e-2f73-40d9-8af2-c90d60873fb1",
+                  "uuid": "456cab80-41f2-4631-ac7d-cc765a019b16",
+                  "parentUUID": "e608f71b-32fb-47ee-abc9-1969729e68b5",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "5bd8b949-046e-4b19-b55c-feacb39e77cb",
-                "c2b04cd9-1250-4dbf-89b5-15de69c238e9"
+                "6efda591-724a-4a11-995d-e37f323b6188",
+                "456cab80-41f2-4631-ac7d-cc765a019b16"
               ],
               "failures": [
-                "73bad3d8-6d8f-4a75-ba0a-4e17fee847a9",
-                "1507684b-8f31-42c4-9499-8be1dc770dca"
+                "eac5db1e-c818-4e47-8ce9-1aebf07698ee",
+                "ef64e504-ff73-4ad9-8883-d19a26adfa5c"
               ],
               "pending": [
-                "bdecd8dd-2bb7-4a89-bdc9-85029391f96b"
+                "4f2cff0e-18d4-4a54-a905-6769f34f2e38"
               ],
               "skipped": [],
-              "duration": 47615,
+              "duration": 51154,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
