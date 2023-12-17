@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2023-12-16T08:13:13.770Z",
-    "end": "2023-12-16T08:13:14.804Z",
-    "duration": 1034,
+    "start": "2023-12-17T08:13:22.133Z",
+    "end": "2023-12-17T08:13:23.356Z",
+    "duration": 1223,
     "testsRegistered": 10,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b826bd90-8c17-47a6-95ef-7dd870fa887d",
+      "uuid": "af23ba1a-019b-44b2-8880-21daf1dcc51e",
       "title": "",
       "fullFile": "cypress/integration/meu-perfil.spec.js",
       "file": "cypress/integration/meu-perfil.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+          "uuid": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
           "title": "Meu Perfil",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Alterar senha",
               "fullTitle": "Meu Perfil Alterar senha",
               "timedOut": null,
-              "duration": 995,
+              "duration": 1179,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://stg-cd.sanoficonecta.com.br/\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:140508:25\n    at visitFailedByErr (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:139883:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:140488:13\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:287:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/meu-perfil.spec.js:127:25)",
                 "diff": null
               },
-              "uuid": "602b4563-a929-42cd-b282-d74c0f6b7ee4",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "1a544f43-cbf6-43e6-8555-0746372af75a",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get('.c-my-profile__section-form-buttons > .c-my-profile__button').click();\ncy.get('.modal-change-password__form > :nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('123');\ncy.contains('Senha inválida').should('have.text', 'Senha inválida');",
               "err": {},
-              "uuid": "ba3f4abd-7bf4-49f8-8756-f4bff142c14c",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "3223c78e-5b6f-4a32-805b-e27c7f4897f5",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get('.c-my-profile__section-form-buttons > .c-my-profile__button').click();\ncy.get('.modal-change-password__form > :nth-child(1) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('Teste@123');\ncy.get('.modal-change-password__form > :nth-child(2) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').type('Teste@999');\ncy.get('.modal-change-password__form-buttons > button').click({\n  force: true\n});\ncy.contains('Os Passwords digitados estão diferentes.').should('have.text', 'Os Passwords digitados estão diferentes.');",
               "err": {},
-              "uuid": "ab88fb2e-f241-4066-88f4-20040fbc8e8d",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "416a44b2-d760-4667-b864-8e6bb1f3bf7e",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('51987165588{enter}');\ncy.get(':nth-child(2) > #profile').click(); // Falta validacão, pois não temos um feedback ao salvar a alteração.",
               "err": {},
-              "uuid": "9239d768-2d26-4aef-a7e5-53534b2c11fd",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "9984341d-de3d-457c-b4c6-21cad4470a9e",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('00111111111{enter}');\ncy.get(':nth-child(3) > .form-element > .form-element__error-message').should('have.text', 'Celular inválido');",
               "err": {},
-              "uuid": "472760f1-f7f1-42ea-898c-4d857e84d22b",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "660feed4-b380-44d6-b2ab-ff9031cfe949",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('medico04@teste.com.br{enter}');",
               "err": {},
-              "uuid": "230918c4-3736-4eaa-b569-df55b317abda",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "6394dc48-b01f-4bf6-a698-19479ed45a86",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -159,8 +159,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('testemedico{enter}');\ncy.get(':nth-child(2) > #profile').click();\ncy.get(':nth-child(4) > .form-element > .form-element__error-message').should('have.text', 'E-mail inválido');",
               "err": {},
-              "uuid": "3dffcad1-aaea-4626-ab82-15fd1c216378",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "dd5c1dc7-a26c-4d8e-a26f-e0e954e45e70",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -177,8 +177,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(4) > .form-element > :nth-child(1) > .input-wrapper > .input-wrapper__text-input').clear().type('testemedico@grr.la{enter}');\ncy.wait(2000);\ncy.get('.c-my-profile__save-container--btn').click(); // Falta validacão, pois não temos um feedback ao salvar a alteração.\ncy.get('.header__profile').click();\ncy.get('.menu-drawer__signout > span').click();",
               "err": {},
-              "uuid": "f81d6f6f-fc43-4c88-a050-e4a1553dffa2",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "3c4d4cb5-5e0a-48d2-a9e2-2a68b49d030a",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -195,8 +195,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click();\ncy.get('#expertiseprimary').select('Endoscopia');\ncy.get('#expertisesecondary').select('Geriatria');\ncy.get(':nth-child(9) > .c-select-list__option').click();\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');\ncy.wait(2000);\ncy.get(':nth-child(9) > .c-select-list__option').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');",
               "err": {},
-              "uuid": "e25ac9da-cb1f-4683-831b-2a121eacea27",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "a69ac332-dd20-4093-9a6e-e6296b7b941f",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             },
@@ -213,8 +213,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\n_meuPerfil.default.AcessarMinhaConta();\ncy.get(':nth-child(3) > #profile > .grid-md-10 > .c-accordion-item__title-text > .c-my-profile__section-error').click();\ncy.get('#expertiseprimary').select('Angiologia');\ncy.get('#expertisesecondary').select('Cirurgia geral');\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');\ncy.get('#expertiseprimary').select('Cardiologia');\ncy.get('#expertisesecondary').select('Neurologia');\ncy.get('.c-my-profile__save-container--btn').click();\ncy.get('.grid-lg-11 > .c-text').should('have.text', 'Dados alterados com sucesso');",
               "err": {},
-              "uuid": "f62ad667-66c6-49a4-96f1-be0c57b1a543",
-              "parentUUID": "e91b5c64-bd06-493c-959c-0b33e56b72e6",
+              "uuid": "ff0318fd-c390-4bcd-883a-d1f47d5f47cc",
+              "parentUUID": "851f5b3d-7528-4277-887e-ec2b8b15b6a0",
               "isHook": false,
               "skipped": true
             }
@@ -222,21 +222,21 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "602b4563-a929-42cd-b282-d74c0f6b7ee4"
+            "1a544f43-cbf6-43e6-8555-0746372af75a"
           ],
           "pending": [],
           "skipped": [
-            "ba3f4abd-7bf4-49f8-8756-f4bff142c14c",
-            "ab88fb2e-f241-4066-88f4-20040fbc8e8d",
-            "9239d768-2d26-4aef-a7e5-53534b2c11fd",
-            "472760f1-f7f1-42ea-898c-4d857e84d22b",
-            "230918c4-3736-4eaa-b569-df55b317abda",
-            "3dffcad1-aaea-4626-ab82-15fd1c216378",
-            "f81d6f6f-fc43-4c88-a050-e4a1553dffa2",
-            "e25ac9da-cb1f-4683-831b-2a121eacea27",
-            "f62ad667-66c6-49a4-96f1-be0c57b1a543"
+            "3223c78e-5b6f-4a32-805b-e27c7f4897f5",
+            "416a44b2-d760-4667-b864-8e6bb1f3bf7e",
+            "9984341d-de3d-457c-b4c6-21cad4470a9e",
+            "660feed4-b380-44d6-b2ab-ff9031cfe949",
+            "6394dc48-b01f-4bf6-a698-19479ed45a86",
+            "dd5c1dc7-a26c-4d8e-a26f-e0e954e45e70",
+            "3c4d4cb5-5e0a-48d2-a9e2-2a68b49d030a",
+            "a69ac332-dd20-4093-9a6e-e6296b7b941f",
+            "ff0318fd-c390-4bcd-883a-d1f47d5f47cc"
           ],
-          "duration": 995,
+          "duration": 1179,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
