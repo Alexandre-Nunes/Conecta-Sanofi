@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-01-29T08:13:50.512Z",
-    "end": "2024-01-29T08:13:51.470Z",
-    "duration": 958,
+    "start": "2024-01-30T08:13:11.704Z",
+    "end": "2024-01-30T08:13:12.470Z",
+    "duration": 766,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0048e961-b9fa-4504-95f9-b335e284af05",
+      "uuid": "ace462e5-99e2-4a8f-83e5-f4d07caf4f91",
       "title": "",
       "fullFile": "cypress/integration/calendario.spec.js",
       "file": "cypress/integration/calendario.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2d299225-baa5-4da5-917c-2d9db7cf1f05",
+          "uuid": "ea522beb-b73f-4d2f-8644-3d0b8b10dd4e",
           "title": "Calendario",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Acessar evento com data passada, como medico",
               "fullTitle": "Calendario Acessar evento com data passada, como medico",
               "timedOut": null,
-              "duration": 919,
+              "duration": 732,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://stg-cd.sanoficonecta.com.br/\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:140508:25\n    at visitFailedByErr (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:139883:12)\n    at https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:140488:13\n    at tryCatcher (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5498:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (https://stg-cd.sanoficonecta.com.br/__cypress/runner/cypress_runner.js:5384:14)\nFrom Your Spec Code:\n    at LoginSistema.acessarSistema (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:202:8)\n    at Context.eval (https://stg-cd.sanoficonecta.com.br/__cypress/tests?p=cypress/integration/calendario.spec.js:125:25)",
                 "diff": null
               },
-              "uuid": "6c89a360-1a9c-4e51-b36e-5aadab9fe9f7",
-              "parentUUID": "2d299225-baa5-4da5-917c-2d9db7cf1f05",
+              "uuid": "4a0eb4d7-e966-4320-ae6f-03af5a43f077",
+              "parentUUID": "ea522beb-b73f-4d2f-8644-3d0b8b10dd4e",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.contains('Evento Zinpass Eze 2021 - Automação Data Futura').click();\ncy.get('.c-text--h1').should('contain', 'Evento Automação Data Futura');",
               "err": {},
-              "uuid": "31b1c70f-d71f-42f6-8008-507d22e5c6c9",
-              "parentUUID": "2d299225-baa5-4da5-917c-2d9db7cf1f05",
+              "uuid": "53a592c9-65fc-43ba-b723-17d225a54a51",
+              "parentUUID": "ea522beb-b73f-4d2f-8644-3d0b8b10dd4e",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click();\ncy.get('#calendar-2021-dezembro > .c-pt-32 > .c-pt-16 > :nth-child(1) > .c-row > .grid-lg-ml-4 > :nth-child(1) > .c-button-align-box > .c-dropdown > .c-button-schedule').click();\ncy.get('.c-dropdown > ul > :nth-child(2)').click(); // Falta validação, na outra aba.",
               "err": {},
-              "uuid": "a9dd8010-03ad-4834-80cf-d5471d813ff2",
-              "parentUUID": "2d299225-baa5-4da5-917c-2d9db7cf1f05",
+              "uuid": "3b689cf3-9093-4867-8d68-9a297238e23f",
+              "parentUUID": "ea522beb-b73f-4d2f-8644-3d0b8b10dd4e",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "_login.default.loginMedico();\ncy.get('.header__menu-links > :nth-child(3) > a').click(); // Falta criar evento ao vivo",
               "err": {},
-              "uuid": "7c40eeb6-a4e3-4e85-a137-ec02ea400efb",
-              "parentUUID": "2d299225-baa5-4da5-917c-2d9db7cf1f05",
+              "uuid": "dcee3f93-e67f-403c-a034-973cfd8e0710",
+              "parentUUID": "ea522beb-b73f-4d2f-8644-3d0b8b10dd4e",
               "isHook": false,
               "skipped": true
             }
@@ -114,15 +114,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6c89a360-1a9c-4e51-b36e-5aadab9fe9f7"
+            "4a0eb4d7-e966-4320-ae6f-03af5a43f077"
           ],
           "pending": [],
           "skipped": [
-            "31b1c70f-d71f-42f6-8008-507d22e5c6c9",
-            "a9dd8010-03ad-4834-80cf-d5471d813ff2",
-            "7c40eeb6-a4e3-4e85-a137-ec02ea400efb"
+            "53a592c9-65fc-43ba-b723-17d225a54a51",
+            "3b689cf3-9093-4867-8d68-9a297238e23f",
+            "dcee3f93-e67f-403c-a034-973cfd8e0710"
           ],
-          "duration": 919,
+          "duration": 732,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
